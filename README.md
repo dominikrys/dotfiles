@@ -16,6 +16,8 @@ Back up Homebrew
 brew bundle dump -f
 ```
 
+To add more applications to be backed up, include them in `.mackup.cfg`.
+
 ## Other commands
 
 Restore your application settings on a newly installed workstation.
