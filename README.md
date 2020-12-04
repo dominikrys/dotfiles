@@ -2,13 +2,21 @@
 
 Personal dotfiles for development on macOS, managed using [Mackup](https://github.com/lra/mackup).
 
-## Usage
+## Making backups
 
 Backup your application settings.
 
 ```bash
 mackup backup
 ```
+
+Back up Homebrew
+
+```bash
+brew bundle dump -f
+```
+
+## Other commands
 
 Restore your application settings on a newly installed workstation.
 
