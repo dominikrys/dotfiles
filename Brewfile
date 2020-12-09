@@ -10,6 +10,7 @@ brew "sqlite"
 brew "xz"
 brew "asciinema"
 brew "brew-cask-completion"
+brew "bzip2"
 brew "cmake"
 brew "coreutils"
 brew "openjdk"
@@ -70,8 +71,11 @@ mas "Accelerate", id: 1459809092
 mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Honey", id: 1472777122
+mas "Hover for Safari", id: 1540705431
 mas "iMazing HEIC Converter", id: 1292198261
 mas "Messenger", id: 1480068668
+mas "OneTab", id: 1540160809
+mas "Right Click", id: 1364038646
 mas "The Unarchiver", id: 425424353
 mas "Tomato 2", id: 1494210770
 mas "Tot", id: 1491071483

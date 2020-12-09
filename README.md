@@ -18,6 +18,19 @@ brew bundle dump -f
 
 To add more applications to be backed up, include them in `.mackup.cfg`.
 
+## Updating oh-my-zsh
+
+Mackup [breaks](https://github.com/lra/mackup/issues/1384) oh-my-zsh updating functioanlity. To fix, from `~/.oh-my-zsh` run:
+
+```bash
+git checkout -b my-custom
+git add .
+git commit -m "fix mackup"
+git checkout master
+upgrade_oh_my_zsh
+git merge my-custom
+```
+
 ## Other commands
 
 Restore your application settings on a newly installed workstation.
