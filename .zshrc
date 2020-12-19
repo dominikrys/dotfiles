@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-completions colored-man-pages autoupdate)
+plugins=(git colored-man-pages zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
 
 autoload -U compinit && compinit
 
@@ -112,14 +112,22 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Personal edits
+####################################################
+#
+# Personal custom config 
+#
+####################################################
 
+# Open file in sublime using `subl`
 ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
+# Solve issues with OMZ updates and P10k
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
+# Initialise pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# Required for running tmux with 256 colours
 alias tmux='tmux -2'
