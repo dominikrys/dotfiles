@@ -1,25 +1,21 @@
-tap "domt4/autoupdate"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-brew "ack"
-brew "openssl@1.1"
-brew "readline"
-brew "sqlite"
-brew "xz"
-brew "asciinema"
 brew "brew-cask-completion"
 brew "bzip2"
 brew "cmake"
 brew "coreutils"
 brew "openjdk"
+brew "openssl@1.1"
+brew "readline"
+brew "sqlite"
+brew "xz"
 brew "emscripten"
 brew "exercism"
 brew "git"
 brew "htop"
 brew "hugo"
-brew "jq"
 brew "mackup"
 brew "mas"
 brew "pyenv"
@@ -32,6 +28,7 @@ brew "wget"
 brew "zlib"
 brew "zsh"
 cask "anki"
+cask "balenaetcher"
 cask "bitwarden"
 cask "calibre"
 cask "cheatsheet"
@@ -39,6 +36,7 @@ cask "clion"
 cask "cyberduck"
 cask "docker"
 cask "firefox"
+cask "google-chrome"
 cask "iina"
 cask "intellij-idea"
 cask "iterm2"
@@ -70,9 +68,11 @@ cask "wireshark"
 mas "Accelerate", id: 1459809092
 mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
+mas "Dark Reader for Safari", id: 1438243180
 mas "Honey", id: 1472777122
 mas "Hover for Safari", id: 1540705431
 mas "iMazing HEIC Converter", id: 1292198261
+mas "iMovie", id: 408981434
 mas "Messenger", id: 1480068668
 mas "OneTab", id: 1540160809
 mas "Right Click", id: 1364038646
