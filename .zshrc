@@ -131,3 +131,6 @@ fi
 
 # Required for running tmux with 256 colours
 alias tmux='tmux -2'
+
+# Don't quarantine Brew casks
+export HOMEBREW_CASK_OPTS="--no-quarantine"
