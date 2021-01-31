@@ -1,0 +1,22 @@
+{
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "git.enableSmartCommit": true,
+    "cSpell.language": "en-GB",
+    "git.inputValidation": "off",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[rust]": {
+        "editor.defaultFormatter": "matklad.rust-analyzer"
+    },
+    "terminal.integrated.automationShell.osx": "",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "explorer.confirmDragAndDrop": false,
+    "python.pythonPath": "/usr/local/bin/python3",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "editor.formatOnSave": true,
+}

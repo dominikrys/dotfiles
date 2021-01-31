@@ -134,3 +134,7 @@ alias tmux='tmux -2'
 
 # Don't quarantine Brew casks
 export HOMEBREW_CASK_OPTS="--no-quarantine"
+
+# Aliases for dock enabling resizing
+alias dock-lock='defaults write com.apple.Dock size-immutable -bool yes; killall Dock'
+alias dock-unlock='defaults write com.apple.Dock size-immutable -bool no; killall Dock'
