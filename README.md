@@ -1,10 +1,30 @@
 # Dotfiles
 
-Personal dotfiles for development on macOS, managed using [Mackup](https://github.com/lra/mackup).
+Personal dotfiles for development on macOS (and Linux with some modifications), managed using [Mackup](https://github.com/lra/mackup).
 
-## Making backups
+To clone with submodules
 
-Backup your application settings.
+```bash
+git clone --recurse-submodules -j8 git@github.com:dominikrys/dotfiles.git
+```
+
+To pull submodules if the repo is already cloned
+
+```bash
+git submodule update --init --recursive
+```
+
+## Maintenance
+
+If a submodule gets into a `dirty` state, run:
+
+```bash
+git submodule foreach --recursive git checkout .
+```
+
+## Making backups with Mackup
+
+Backup your application settings
 
 ```bash
 mackup backup
@@ -18,40 +38,28 @@ brew bundle dump -f
 
 To add more applications to be backed up, include them in `.mackup.cfg`.
 
-## Updating oh-my-zsh
+## Other Mackup commands
 
-Mackup [breaks](https://github.com/lra/mackup/issues/1384) oh-my-zsh updating functioanlity. To fix, from `~/.oh-my-zsh` run:
-
-```bash
-git checkout -b my-custom
-git add .
-git commit -m "fix mackup"
-git checkout master
-upgrade_oh_my_zsh
-git merge my-custom
-```
-
-## Other commands
-
-Restore your application settings on a newly installed workstation.
+Restore your application settings on a newly installed workstation
 
 ```bash
 mackup restore
 ```
 
-Copy back any synced config files to their original place.
+Copy back any synced config files to their original place
 
 ```bash
 mackup uninstall
 ```
 
-Display the list of applications supported by Mackup.
+Display the list of applications supported by Mackup
 
 ```bash
 mackup list
 ```
 
 Show steps without executing
+
 ```bash
 mackup backup -n
 ```
