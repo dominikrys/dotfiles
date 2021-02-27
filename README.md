@@ -14,17 +14,11 @@ To pull submodules if the repo is already cloned
 git submodule update --init --recursive
 ```
 
-## Maintenance
+## Making backups + maintenance
 
-If a submodule gets into a `dirty` state, run:
+To add more applications to be backed up, include them in `.mackup.cfg`.
 
-```bash
-git submodule foreach --recursive git checkout .
-```
-
-## Making backups with Mackup
-
-Backup your application settings
+Backup application settings
 
 ```bash
 mackup backup
@@ -36,7 +30,11 @@ Back up Homebrew
 brew bundle dump -f
 ```
 
-To add more applications to be backed up, include them in `.mackup.cfg`.
+If a submodule gets into a `dirty` state, run:
+
+```bash
+git submodule foreach --recursive git checkout .
+```
 
 ## Other Mackup commands
 
