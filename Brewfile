@@ -30,7 +30,7 @@ brew "zlib"
 brew "zsh"
 cask "anki"
 cask "balenaetcher"
-cask "bitwarden"
+cask "betterzip"
 cask "calibre"
 cask "cheatsheet"
 cask "clion"
@@ -38,6 +38,7 @@ cask "cyberduck"
 cask "docker"
 cask "firefox"
 cask "google-chrome"
+cask "hex-fiend"
 cask "iina"
 cask "intellij-idea"
 cask "iterm2"
@@ -58,6 +59,7 @@ cask "qlvideo"
 cask "quicklook-csv"
 cask "quicklook-json"
 cask "quicklookase"
+cask "raindropio"
 cask "rectangle"
 cask "steam"
 cask "sublime-text"
@@ -69,6 +71,7 @@ cask "wireshark"
 mas "Accelerate", id: 1459809092
 mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
+mas "Bitwarden", id: 1352778147
 mas "Dark Reader for Safari", id: 1438243180
 mas "Honey", id: 1472777122
 mas "Hover for Safari", id: 1540705431
