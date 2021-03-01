@@ -61,3 +61,18 @@ Show steps without executing
 ```bash
 mackup backup -n
 ```
+
+## Auto-updating oh-my-zsh plugins and themes
+
+Add the following to `$ZSH/tools/upgrade.sh` before `exit $status` ([source](https://unix.stackexchange.com/questions/477258/how-to-auto-update-custom-plugins-in-oh-my-zsh/597740#597740)):
+
+```zsh
+printf "\n${BLUE}%s${RESET}\n" "Updating custom plugins and themes"
+cd custom/
+for plugin in plugins/*/ themes/*/; do
+  if [ -d "$plugin/.git" ]; then
+     printf "${YELLOW}%s${RESET}\n" "${plugin%/}"
+     git -C "$plugin" pull
+  fi
+done
+```
