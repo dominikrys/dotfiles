@@ -1,6 +1,6 @@
 # Dotfiles
 
-Personal dotfiles for development on macOS (and Linux with some modifications), managed using [Mackup](https://github.com/lra/mackup).
+Personal dotfiles for development on macOS and Linux, managed using [Mackup](https://github.com/lra/mackup).
 
 To clone with submodules
 
@@ -24,7 +24,7 @@ Backup application settings
 mackup backup
 ```
 
-Back up Homebrew
+Back up packages installed through Homebrew
 
 ```bash
 brew bundle dump -f
@@ -44,10 +44,10 @@ Restore your application settings on a newly installed workstation
 mackup restore
 ```
 
-Copy back any synced config files to their original place
+Show steps without executing
 
 ```bash
-mackup uninstall
+mackup backup -n
 ```
 
 Display the list of applications supported by Mackup
@@ -56,10 +56,10 @@ Display the list of applications supported by Mackup
 mackup list
 ```
 
-Show steps without executing
+Copy back any synced config files to their original place
 
 ```bash
-mackup backup -n
+mackup uninstall
 ```
 
 ## Auto-updating oh-my-zsh plugins and themes

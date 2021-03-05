@@ -118,9 +118,6 @@ source $ZSH/oh-my-zsh.sh
 #
 ####################################################
 
-# Open file in sublime using `subl`
-ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-
 # Solve issues with OMZ updates and P10k
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
@@ -132,9 +129,17 @@ fi
 # Required for running tmux with 256 colours
 alias tmux='tmux -2'
 
-# Don't quarantine Brew casks
-export HOMEBREW_CASK_OPTS="--no-quarantine"
+case "$OSTYPE" in
+  darwin*) # macOS
+  
+    # Open file in sublime using `subl`
+    ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
-# Aliases for dock enabling resizing
-alias dock-lock='defaults write com.apple.Dock size-immutable -bool yes; killall Dock'
-alias dock-unlock='defaults write com.apple.Dock size-immutable -bool no; killall Dock'
+    # Don't quarantine Brew casks
+    export HOMEBREW_CASK_OPTS="--no-quarantine"
+
+    # Aliases for dock enabling resizing
+    alias dock-lock='defaults write com.apple.Dock size-immutable -bool yes; killall Dock'
+    alias dock-unlock='defaults write com.apple.Dock size-immutable -bool no; killall Dock'
+  ;;
+esac
