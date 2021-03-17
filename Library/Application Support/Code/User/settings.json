@@ -19,4 +19,10 @@
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "editor.largeFileOptimizations": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
 }

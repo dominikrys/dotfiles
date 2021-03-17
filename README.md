@@ -8,6 +8,12 @@ To clone with submodules
 git clone --recurse-submodules -j8 git@github.com:dominikrys/dotfiles.git
 ```
 
+Fix permissions after cloning
+
+```bash
+chmod -R 775 dotfiles
+```
+
 To pull submodules if the repo is already cloned
 
 ```bash
