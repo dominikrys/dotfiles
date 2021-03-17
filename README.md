@@ -27,7 +27,7 @@ To add more applications to be backed up, include them in `.mackup.cfg`.
 Backup application settings
 
 ```bash
-mackup backup
+mackup backup -f
 ```
 
 Back up packages installed through Homebrew
@@ -36,7 +36,13 @@ Back up packages installed through Homebrew
 brew bundle dump -f
 ```
 
-If a submodule gets into a `dirty` state, run:
+Scan and add git submodules ([source](https://stackoverflow.com/questions/10606101/automatically-add-all-submodules-to-a-repo))
+
+```bash
+for x in $(find . -type d) ; do if [ -d "${x}/.git" ] ; then cd "${x}" ; origin="$(git config --get remote.origin.url)" ; cd - 1>/dev/null; git submodule add "${origin}" "${x}" ; fi ; done
+```
+
+If a git submodule gets into a `dirty` state, run:
 
 ```bash
 git submodule foreach --recursive git checkout .
