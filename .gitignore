@@ -9,3 +9,7 @@ Icon
 
 # Thumbnails
 ._*
+
+### Custom ###
+# tmux resurrect files
+.tmux/resurrect
