@@ -126,8 +126,20 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-# Required for running tmux with 256 colours
-alias tmux='tmux -2'
+# Scan current directory and add git submodules (https://stackoverflow.com/a/10607225/13749561)
+add-git-submodules() {
+  for x in $(find . -type d) ; do
+    if [ -d "${x}/.git" ] ; then
+        cd "${x}"
+        origin="$(git config --get remote.origin.url)"
+        cd - 1>/dev/null
+        git submodule add "${origin}" "${x}"
+    fi
+  done
+}
+
+# Update TPM plugins
+alias tpm-update='~/.tmux/plugins/tpm/bin/update_plugins all'
 
 case "$OSTYPE" in
   darwin*) # macOS
@@ -141,5 +153,15 @@ case "$OSTYPE" in
     # Aliases for dock enabling resizing
     alias dock-lock='defaults write com.apple.Dock size-immutable -bool yes; killall Dock'
     alias dock-unlock='defaults write com.apple.Dock size-immutable -bool no; killall Dock'
+
+    # Update various tools
+    cli-update() {
+      echo "> Upgrading brew packages"
+      brew upgrade
+      echo "> Updating oh-my-zsh"
+      omz update
+      echo "> Updating TPM"
+      tpm-update
+    }
   ;;
 esac

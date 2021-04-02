@@ -2,7 +2,9 @@
 
 Personal dotfiles for development on macOS and Linux, managed using [Mackup](https://github.com/lra/mackup).
 
-To clone with submodules
+## Cloning
+
+Clone with submodules
 
 ```bash
 git clone --recurse-submodules -j8 git@github.com:dominikrys/dotfiles.git
@@ -14,7 +16,7 @@ Fix permissions after cloning
 chmod -R 775 dotfiles
 ```
 
-To pull submodules if the repo is already cloned
+Pull submodules if the repo is already cloned
 
 ```bash
 git submodule update --init --recursive
@@ -30,22 +32,37 @@ Backup application settings
 mackup backup -f
 ```
 
-Back up packages installed through Homebrew
+List packages installed through Homebrew
 
 ```bash
 brew bundle dump -f
 ```
 
-Scan and add git submodules ([source](https://stackoverflow.com/questions/10606101/automatically-add-all-submodules-to-a-repo))
+Scan and add git submodules
 
 ```bash
-for x in $(find . -type d) ; do if [ -d "${x}/.git" ] ; then cd "${x}" ; origin="$(git config --get remote.origin.url)" ; cd - 1>/dev/null; git submodule add "${origin}" "${x}" ; fi ; done
+add-git-submodules
 ```
 
-If a git submodule gets into a `dirty` state, run:
+If a git submodule gets into a `dirty` state
 
 ```bash
 git submodule foreach --recursive git checkout .
+```
+
+## Auto-updating oh-my-zsh plugins and themes
+
+Add the following to `$ZSH/tools/upgrade.sh` before `exit $status` ([source](https://unix.stackexchange.com/questions/477258/how-to-auto-update-custom-plugins-in-oh-my-zsh/597740#597740)):
+
+```zsh
+printf "\n${BLUE}%s${RESET}\n" "Updating custom plugins and themes"
+cd custom/
+for plugin in plugins/*/ themes/*/; do
+  if [ -d "$plugin/.git" ]; then
+     printf "${YELLOW}%s${RESET}\n" "${plugin%/}"
+     git -C "$plugin" pull
+  fi
+done
 ```
 
 ## Other Mackup commands
@@ -72,19 +89,4 @@ Copy back any synced config files to their original place
 
 ```bash
 mackup uninstall
-```
-
-## Auto-updating oh-my-zsh plugins and themes
-
-Add the following to `$ZSH/tools/upgrade.sh` before `exit $status` ([source](https://unix.stackexchange.com/questions/477258/how-to-auto-update-custom-plugins-in-oh-my-zsh/597740#597740)):
-
-```zsh
-printf "\n${BLUE}%s${RESET}\n" "Updating custom plugins and themes"
-cd custom/
-for plugin in plugins/*/ themes/*/; do
-  if [ -d "$plugin/.git" ]; then
-     printf "${YELLOW}%s${RESET}\n" "${plugin%/}"
-     git -C "$plugin" pull
-  fi
-done
 ```
