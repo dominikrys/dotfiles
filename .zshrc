@@ -127,8 +127,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # Scan current directory and add git submodules (https://stackoverflow.com/a/10607225/13749561)
-add-git-submodules() {
-  for x in $(find . -type d) ; do
+git-add-submodules() {
+  for x in $(find . -mindepth 1 -type d) ; do
     if [ -d "${x}/.git" ] ; then
         cd "${x}"
         origin="$(git config --get remote.origin.url)"
@@ -156,12 +156,12 @@ case "$OSTYPE" in
 
     # Update various tools
     cli-update() {
-      echo "> Upgrading brew packages"
+      echo "==> Upgrading brew packages"
       brew upgrade
-      echo "> Updating oh-my-zsh"
-      omz update
-      echo "> Updating TPM"
+      echo "==> Updating TPM"
       tpm-update
+      echo "==> Updating oh-my-zsh"
+      omz update
     }
   ;;
 esac

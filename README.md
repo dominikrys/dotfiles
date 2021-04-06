@@ -41,7 +41,7 @@ brew bundle dump -f
 Scan and add git submodules
 
 ```bash
-add-git-submodules
+git-add-submodules
 ```
 
 If a git submodule gets into a `dirty` state
