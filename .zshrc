@@ -156,8 +156,12 @@ case "$OSTYPE" in
 
     # Update various tools
     cli-update() {
-      echo "==> Upgrading brew packages"
+      echo "==> Upgrading Homebrew packages"
       brew upgrade
+      echo "==> Cleaning unused Homebrew dependencies"
+      brew autoremove
+      echo "==> Saving list of Homebrew packages"
+      brew bundle dump -f
       echo "==> Updating TPM"
       tpm-update
       echo "==> Updating oh-my-zsh"
