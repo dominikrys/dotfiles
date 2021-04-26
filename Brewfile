@@ -45,6 +45,7 @@ cask "monitorcontrol"
 cask "omnidisksweeper"
 cask "pycharm"
 cask "qbittorrent"
+cask "qlvideo"
 cask "rectangle"
 cask "steam"
 cask "sublime-text"
@@ -60,8 +61,11 @@ mas "Dark Reader for Safari", id: 1438243180
 mas "Honey", id: 1472777122
 mas "Hover for Safari", id: 1540705431
 mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
 mas "Messenger", id: 1480068668
+mas "Numbers", id: 409203825
 mas "OneTab", id: 1540160809
+mas "Pages", id: 409201541
 mas "Right Click", id: 1364038646
 mas "The Unarchiver", id: 425424353
 mas "Tomato 2", id: 1494210770
