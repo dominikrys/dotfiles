@@ -161,7 +161,7 @@ case "$OSTYPE" in
       echo "==> Cleaning unused Homebrew dependencies"
       brew autoremove
       echo "==> Saving list of Homebrew packages"
-      brew bundle dump -f
+      brew bundle dump -f --file=~/Brewfile
       echo "==> Updating TPM"
       tpm-update
       echo "==> Updating oh-my-zsh"
