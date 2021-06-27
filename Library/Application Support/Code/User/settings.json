@@ -19,12 +19,9 @@
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "editor.largeFileOptimizations": false,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "leetcode.workspaceFolder": "/Users/dominikrys/.leetcode",
     "leetcode.defaultLanguage": "python3",
     "leetcode.hint.configWebviewMarkdown": false,
@@ -75,4 +72,11 @@
         }
     },
     "grammarly.dialect": "british",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "redhat.telemetry.enabled": false,
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
 }
