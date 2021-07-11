@@ -155,17 +155,28 @@ case "$OSTYPE" in
     alias dock-unlock='defaults write com.apple.Dock size-immutable -bool no; killall Dock'
 
     # Update various tools
-    cli-update() {
+    update() {
       echo "==> Upgrading Homebrew packages"
       brew upgrade
       echo "==> Cleaning unused Homebrew dependencies"
       brew autoremove
-      echo "==> Saving list of Homebrew packages"
-      brew bundle dump -f --file=~/Brewfile
       echo "==> Updating TPM"
       tpm-update
       echo "==> Updating oh-my-zsh"
       omz update
+    }
+
+    # Run backups
+    backup() {
+      echo "==> Saving list of Homebrew packages"
+      brew bundle dump -f --file=~/Brewfile
+      echo "==> Making a backup with mackup"
+      mackup backup -f
+    }
+
+    update-and-backup() {
+      update
+      backup
     }
   ;;
 esac

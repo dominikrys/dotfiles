@@ -22,20 +22,29 @@ Pull submodules if the repo is already cloned
 git submodule update --init --recursive
 ```
 
-## Making backups + maintenance
+### Auto-updating oh-my-zsh plugins and themes
 
-To add more applications to be backed up, include them in `.mackup.cfg`.
+Since ZSH can't easily be stored in this repo, after cloning add the following to `$ZSH/tools/upgrade.sh` before `exit $status` ([source](https://unix.stackexchange.com/questions/477258/how-to-auto-update-custom-plugins-in-oh-my-zsh/597740#597740)):
 
-Backup application settings
-
-```bash
-mackup backup -f
+```zsh
+printf "\n${BLUE}%s${RESET}\n" "Updating custom plugins and themes"
+cd custom/
+for plugin in plugins/*/ themes/*/; do
+  if [ -d "$plugin/.git" ]; then
+     printf "${YELLOW}%s${RESET}\n" "${plugin%/}"
+     git -C "$plugin" pull
+  fi
+done
 ```
 
-List packages installed through Homebrew
+## Making backups & maintenance
+
+> To add more applications to be backed up, include them in `.mackup.cfg`.
+
+Backup application settings and make a list of Homebrew packages
 
 ```bash
-brew bundle dump -f
+backup
 ```
 
 Scan and add git submodules
@@ -50,22 +59,7 @@ If a git submodule gets into a `dirty` state
 git submodule foreach --recursive git checkout .
 ```
 
-## Auto-updating oh-my-zsh plugins and themes
-
-Add the following to `$ZSH/tools/upgrade.sh` before `exit $status` ([source](https://unix.stackexchange.com/questions/477258/how-to-auto-update-custom-plugins-in-oh-my-zsh/597740#597740)):
-
-```zsh
-printf "\n${BLUE}%s${RESET}\n" "Updating custom plugins and themes"
-cd custom/
-for plugin in plugins/*/ themes/*/; do
-  if [ -d "$plugin/.git" ]; then
-     printf "${YELLOW}%s${RESET}\n" "${plugin%/}"
-     git -C "$plugin" pull
-  fi
-done
-```
-
-## Other Mackup commands
+## Useful Mackup commands
 
 Restore your application settings on a newly installed workstation
 
