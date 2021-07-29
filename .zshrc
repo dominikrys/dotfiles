@@ -168,15 +168,10 @@ case "$OSTYPE" in
 
     # Run backups
     backup() {
-      echo "==> Saving list of Homebrew packages"
+      echo "==> Saving a list of Homebrew packages"
       brew bundle dump -f --file=~/Brewfile
-      echo "==> Making a backup with mackup"
+      echo "==> Creating a backup with mackup"
       mackup backup -f
-    }
-
-    update-and-backup() {
-      update
-      backup
     }
   ;;
 esac
