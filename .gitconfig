@@ -3,3 +3,5 @@
 	email = dominik.j.rys@gmail.com
 [pull]
 	rebase = false
+[init]
+  defaultBranch = main

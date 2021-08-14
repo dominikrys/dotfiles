@@ -20,7 +20,6 @@ brew "mas"
 brew "node"
 brew "openjdk"
 brew "pyenv"
-brew "sdl2"
 brew "tldr"
 brew "tmux"
 brew "zsh"
@@ -58,15 +57,14 @@ mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "Dark Reader for Safari", id: 1438243180
+mas "Hidden Bar", id: 1452453066
 mas "Honey", id: 1472777122
 mas "Hover for Safari", id: 1540705431
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Messenger", id: 1480068668
-mas "OneTab", id: 1540160809
 mas "Right Click", id: 1364038646
 mas "The Unarchiver", id: 425424353
 mas "Tomato 2", id: 1494210770
-mas "Tot", id: 1491071483
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835

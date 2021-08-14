@@ -81,32 +81,6 @@
                     "ignore": true,
                     "manipulate_caps_lock_led": true,
                     "simple_modifications": []
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 130,
-                        "vendor_id": 12136
-                    },
-                    "ignore": true,
-                    "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 130,
-                        "vendor_id": 12136
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
                 }
             ],
             "fn_function_keys": [
@@ -116,7 +90,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "play_or_pause"
+                            "consumer_key_code": "display_brightness_decrement"
                         }
                     ]
                 },
@@ -126,7 +100,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "play_or_pause"
+                            "consumer_key_code": "display_brightness_increment"
                         }
                     ]
                 },
@@ -136,7 +110,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "rewind"
+                            "apple_vendor_keyboard_key_code": "mission_control"
                         }
                     ]
                 },
@@ -146,7 +120,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "fast_forward"
+                            "apple_vendor_keyboard_key_code": "spotlight"
                         }
                     ]
                 },
@@ -156,7 +130,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "mute"
+                            "consumer_key_code": "dictation"
                         }
                     ]
                 },
@@ -166,7 +140,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "volume_decrement"
+                            "key_code": "f6"
                         }
                     ]
                 },
@@ -176,7 +150,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "volume_increment"
+                            "consumer_key_code": "rewind"
                         }
                     ]
                 },
@@ -186,7 +160,7 @@
                     },
                     "to": [
                         {
-                            "apple_vendor_keyboard_key_code": "spotlight"
+                            "consumer_key_code": "play_or_pause"
                         }
                     ]
                 },
@@ -196,7 +170,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "play_or_pause"
+                            "consumer_key_code": "fast_forward"
                         }
                     ]
                 },
