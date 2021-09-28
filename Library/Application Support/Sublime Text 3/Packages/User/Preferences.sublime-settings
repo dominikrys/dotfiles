@@ -1,5 +1,6 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-	"spell_check": true
+	"spell_check": true,
+	"dictionary": "Packages/Language - English/en_GB.dic",
 }

@@ -22,24 +22,28 @@ Pull submodules if the repo is already cloned
 git submodule update --init --recursive
 ```
 
-### Auto-updating oh-my-zsh plugins and themes
+### Steps after cloning
 
-Since ZSH can't easily be stored in this repo, after cloning add the following to `$ZSH/tools/upgrade.sh` before `exit $status` ([source](https://unix.stackexchange.com/questions/477258/how-to-auto-update-custom-plugins-in-oh-my-zsh/597740#597740)):
+- Install `cmake` to get `tmux-mem-cpu-load` to work.
 
-```zsh
-printf "\n${BLUE}%s${RESET}\n" "Updating custom plugins and themes"
-cd custom/
-for plugin in plugins/*/ themes/*/; do
-  if [ -d "$plugin/.git" ]; then
-     printf "${YELLOW}%s${RESET}\n" "${plugin%/}"
-     git -C "$plugin" pull
-  fi
-done
-```
+- Auto-updating oh-my-zsh plugins and themes
+
+  Since ZSH can't easily be stored in this repo, after cloning add the following to `$ZSH/tools/upgrade.sh` before `exit $ret` ([source](https://unix.stackexchange.com/questions/477258/how-to-auto-update-custom-plugins-in-oh-my-zsh/597740#597740)):
+
+  ```zsh
+  printf "\n${BLUE}%s${RESET}\n" "Updating custom plugins and themes"
+  cd custom/
+  for plugin in plugins/*/ themes/*/; do
+    if [ -d "$plugin/.git" ]; then
+      printf "${YELLOW}%s${RESET}\n" "${plugin%/}"
+      git -C "$plugin" pull
+    fi
+  done
+  ```
 
 ## Making backups & maintenance
 
-> To add more applications to be backed up, include them in `.mackup.cfg`.
+- To add more applications to be backed up, include them in `.mackup.cfg`.
 
 Backup application settings and make a list of Homebrew packages
 
