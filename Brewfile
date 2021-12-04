@@ -58,7 +58,6 @@ mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "Dark Reader for Safari", id: 1438243180
-mas "Hidden Bar", id: 1452453066
 mas "Honey", id: 1472777122
 mas "Hover for Safari", id: 1540705431
 mas "iMovie", id: 408981434
