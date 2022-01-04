@@ -97,5 +97,6 @@
         }
     },
     "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": false
+    "gitlens.currentLine.enabled": false,
+    "go.toolsManagement.autoUpdate": true
 }

@@ -139,6 +139,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# Add global yarn packages to path
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 # Scan current directory and add git submodules (https://stackoverflow.com/a/10607225/13749561)
 git-add-submodules() {
   for x in $(find . -mindepth 1 -type d) ; do
@@ -174,7 +177,9 @@ case "$OSTYPE" in
       echo "==> Cleaning unused Homebrew dependencies"
       brew autoremove
       echo "==> Updating TPM"
-      tpm-update
+      tpm-update 
+      echo "==> Updating tldr"
+      tldr --update
       echo "==> Updating oh-my-zsh"
       omz update
     }
