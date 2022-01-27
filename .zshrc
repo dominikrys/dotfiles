@@ -157,6 +157,9 @@ git-add-submodules() {
 # Update TPM plugins
 alias tpm-update='~/.tmux/plugins/tpm/bin/update_plugins all'
 
+# Refresh gitingore
+alias git-refresh-gitignore='git rm -r --cached . && git add .'
+
 case "$OSTYPE" in
   darwin*) # macOS
   

@@ -1,102 +1,111 @@
 {
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "git.enableSmartCommit": true,
+  "cSpell.language": "en-GB",
+  "git.inputValidation": "off",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer"
+  },
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "explorer.confirmDragAndDrop": false,
+  "python.pythonPath": "/usr/local/bin/python3",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "editor.largeFileOptimizations": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "leetcode.workspaceFolder": "/Users/dominikrys/.leetcode",
+  "leetcode.defaultLanguage": "python3",
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.hint.commandShortcut": false,
+  "grammarly.dialect": "british",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "redhat.telemetry.enabled": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "files.exclude": {
+    "**/.git": false
+  },
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+  "hediet.vscode-drawio.theme": "atlas",
+  "python.defaultInterpreterPath": "\\usr\\local\\bin\\python3",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "settingsSync.ignoredExtensions": [
+    "ms-vscode.powershell",
+    "ms-vscode-remote.remote-wsl"
+  ],
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.hovers.enabled": false,
+  "gitlens.menus": {
+    "editor": {
+      "blame": false,
+      "clipboard": true,
+      "compare": true,
+      "history": false,
+      "remote": false
     },
-    "git.enableSmartCommit": true,
-    "cSpell.language": "en-GB",
-    "git.inputValidation": "off",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editorGroup": false,
+    "editorTab": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
     },
-    "diffEditor.ignoreTrimWhitespace": false,
-    "[rust]": {
-        "editor.defaultFormatter": "matklad.rust-analyzer"
+    "explorer": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
     },
-    "terminal.integrated.automationShell.osx": "",
-    "terminal.integrated.fontFamily": "MesloLGS NF",
-    "explorer.confirmDragAndDrop": false,
-    "python.pythonPath": "/usr/local/bin/python3",
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "editor.largeFileOptimizations": false,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
+    "scm": {
+      "authors": true
     },
-    "leetcode.workspaceFolder": "/Users/dominikrys/.leetcode",
-    "leetcode.defaultLanguage": "python3",
-    "leetcode.hint.configWebviewMarkdown": false,
-    "leetcode.hint.commandShortcut": false,
-    "grammarly.dialect": "british",
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "scmGroupInline": {
+      "stash": true
     },
-    "redhat.telemetry.enabled": false,
-    "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
+    "scmGroup": {
+      "compare": true,
+      "openClose": true,
+      "stash": true
     },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "files.exclude": {
-        "**/.git": false
-    },
-    "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
-    "hediet.vscode-drawio.theme": "atlas",
-    "python.defaultInterpreterPath": "\\usr\\local\\bin\\python3",
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
-    "settingsSync.ignoredExtensions": [
-        "ms-vscode.powershell",
-        "ms-vscode-remote.remote-wsl"
-    ],
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.hovers.enabled": false,
-    "gitlens.menus": {
-        "editor": {
-            "blame": false,
-            "clipboard": true,
-            "compare": true,
-            "history": false,
-            "remote": false
-        },
-        "editorGroup": false,
-        "editorTab": {
-            "clipboard": true,
-            "compare": true,
-            "history": true,
-            "remote": true
-        },
-        "explorer": {
-            "clipboard": true,
-            "compare": true,
-            "history": true,
-            "remote": true
-        },
-        "scm": {
-            "authors": true
-        },
-        "scmGroupInline": {
-            "stash": true
-        },
-        "scmGroup": {
-            "compare": true,
-            "openClose": true,
-            "stash": true
-        },
-        "scmItem": {
-            "clipboard": true,
-            "compare": true,
-            "history": true,
-            "remote": false,
-            "stash": true
-        }
-    },
-    "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": false,
-    "go.toolsManagement.autoUpdate": true
+    "scmItem": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": false,
+      "stash": true
+    }
+  },
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "go.toolsManagement.autoUpdate": true,
+  "git.confirmSync": false
 }
