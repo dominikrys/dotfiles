@@ -160,6 +160,19 @@ alias tpm-update='~/.tmux/plugins/tpm/bin/update_plugins all'
 # Refresh gitingore
 alias git-refresh-gitignore='git rm -r --cached . && git add .'
 
+# Disable OMZ update prompt
+zstyle ':omz:update' mode disabled
+
+# Update tools
+update() {
+  echo "==> Updating TPM"
+  tpm-update 
+  echo "==> Updating tldr"
+  tldr --update
+  echo "==> Updating oh-my-zsh"
+  omz update
+}
+
 case "$OSTYPE" in
   darwin*) # macOS
   
@@ -173,18 +186,15 @@ case "$OSTYPE" in
     alias dock-lock='defaults write com.apple.Dock size-immutable -bool yes; killall Dock'
     alias dock-unlock='defaults write com.apple.Dock size-immutable -bool no; killall Dock'
 
-    # Update various tools
-    update() {
+    # Override update adding macOS tools
+    functions[original_update]=$functions[update]
+    update () {
       echo "==> Upgrading Homebrew packages"
       brew upgrade
       echo "==> Cleaning unused Homebrew dependencies"
       brew autoremove
-      echo "==> Updating TPM"
-      tpm-update 
-      echo "==> Updating tldr"
-      tldr --update
-      echo "==> Updating oh-my-zsh"
-      omz update
+
+      original_update $@[@]
     }
 
     # Run backups
