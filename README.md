@@ -26,9 +26,7 @@ git submodule update --init --recursive
 
 - Install `cmake` to get `tmux-mem-cpu-load` to work.
 
-- Auto-updating oh-my-zsh plugins and themes
-
-  Since ZSH can't easily be stored in this repo, after cloning add the following to `$ZSH/tools/upgrade.sh` before `exit $ret` ([source](https://unix.stackexchange.com/questions/477258/how-to-auto-update-custom-plugins-in-oh-my-zsh/597740#597740)):
+- Configure auto-updating oh-my-zsh plugins and themes by adding the following to `$ZSH/tools/upgrade.sh` before `exit $ret` ([source](https://unix.stackexchange.com/questions/477258/how-to-auto-update-custom-plugins-in-oh-my-zsh/597740#597740)):
 
   ```zsh
   printf "\n${BLUE}%s${RESET}\n" "Updating custom plugins and themes"
@@ -43,7 +41,7 @@ git submodule update --init --recursive
 
 ## Making backups & maintenance
 
-- To add more applications to be backed up, include them in `.mackup.cfg`.
+> To add more applications to be backed up, include them in `.mackup.cfg`.
 
 Backup application settings and make a list of Homebrew packages
 
@@ -57,13 +55,13 @@ Scan and add git submodules
 git-add-submodules
 ```
 
-If a git submodule gets into a `dirty` state
+Fix a git submodule in a `dirty` state
 
 ```bash
 git submodule foreach --recursive git checkout .
 ```
 
-## Useful Mackup commands
+### Useful Mackup commands
 
 Restore your application settings on a newly installed workstation
 
