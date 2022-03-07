@@ -39,6 +39,8 @@ git submodule update --init --recursive
   done
   ```
 
+  > **NOTE:** try to use [autoupdate-zsh-plugin](https://github.com/TamCore/autoupdate-oh-my-zsh-plugins) on the next clone instead.
+
 ## Making backups & maintenance
 
 > To add more applications to be backed up, include them in `.mackup.cfg`.

@@ -163,6 +163,9 @@ alias git-refresh-gitignore='git rm -r --cached . && git add .'
 # Disable OMZ update prompt
 zstyle ':omz:update' mode disabled
 
+# Disable autoupdate-zsh-plugin automatic updating
+export UPDATE_ZSH_DAYS=0
+
 # Update tools
 update() {
   echo "==> Updating TPM"
