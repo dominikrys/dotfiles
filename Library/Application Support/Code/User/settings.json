@@ -93,5 +93,8 @@
   "gitlens.codeLens.enabled": false,
   "gitlens.currentLine.enabled": false,
   "go.toolsManagement.autoUpdate": true,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "settingsSync.ignoredExtensions": [
+    "ms-kubernetes-tools.vscode-kubernetes-tools"
+  ]
 }

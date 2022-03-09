@@ -39,8 +39,6 @@ git submodule update --init --recursive
   done
   ```
 
-  > **NOTE:** try to use [autoupdate-zsh-plugin](https://github.com/TamCore/autoupdate-oh-my-zsh-plugins) on the next clone instead.
-
 ## Making backups & maintenance
 
 > To add more applications to be backed up, include them in `.mackup.cfg`.
@@ -88,3 +86,8 @@ Copy back any synced config files to their original place
 ```bash
 mackup uninstall
 ```
+
+### TODO
+
+- [ ] Use [autoupdate-zsh-plugin](https://github.com/TamCore/autoupdate-oh-my-zsh-plugins) instead of manually editing omz files for autoupdate.
+- [ ] Properly link/structure files in `misc`

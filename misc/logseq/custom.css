@@ -1,0 +1,16 @@
+.flashcards-nav,
+.graph-view-nav,
+.nav-content-item.recent,
+.ti-home {
+    display: none;
+}
+
+.all-pages-nav {
+  opacity: 0.3;
+  zoom: 0.9;
+}
+
+:root {
+  --ls-left-sidebar-width: 168px; /* default: 240px */
+  --ls-main-content-max-width: 900px; /* default: 810px */
+}
