@@ -90,6 +90,7 @@ plugins=(
   zsh-syntax-highlighting
   zsh-autosuggestions
   zsh-completions
+  autoupdate
   )
 
 autoload -U compinit && compinit
@@ -164,7 +165,7 @@ alias git-refresh-gitignore='git rm -r --cached . && git add .'
 zstyle ':omz:update' mode disabled
 
 # Disable autoupdate-zsh-plugin automatic updating
-export UPDATE_ZSH_DAYS=0
+export UPDATE_ZSH_DAYS=999
 
 # Update tools
 update() {
@@ -174,6 +175,8 @@ update() {
   tldr --update
   echo "==> Updating oh-my-zsh"
   omz update
+  echo "==> Updating oh-my-zsh plugins"
+  upgrade_oh_my_zsh_custom
 }
 
 case "$OSTYPE" in

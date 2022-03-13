@@ -22,23 +22,6 @@ Pull submodules if the repo is already cloned
 git submodule update --init --recursive
 ```
 
-### Steps after cloning
-
-- Install `cmake` to get `tmux-mem-cpu-load` to work.
-
-- Configure auto-updating oh-my-zsh plugins and themes by adding the following to `$ZSH/tools/upgrade.sh` before `exit $ret` ([source](https://unix.stackexchange.com/questions/477258/how-to-auto-update-custom-plugins-in-oh-my-zsh/597740#597740)):
-
-  ```zsh
-  printf "\n${BLUE}%s${RESET}\n" "Updating custom plugins and themes"
-  cd custom/
-  for plugin in plugins/*/ themes/*/; do
-    if [ -d "$plugin/.git" ]; then
-      printf "${YELLOW}%s${RESET}\n" "${plugin%/}"
-      git -C "$plugin" pull
-    fi
-  done
-  ```
-
 ## Making backups & maintenance
 
 > To add more applications to be backed up, include them in `.mackup.cfg`.
@@ -89,5 +72,4 @@ mackup uninstall
 
 ### TODO
 
-- [ ] Use [autoupdate-zsh-plugin](https://github.com/TamCore/autoupdate-oh-my-zsh-plugins) instead of manually editing omz files for autoupdate.
 - [ ] Properly link/structure files in `misc`

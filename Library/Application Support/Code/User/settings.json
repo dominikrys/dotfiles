@@ -45,8 +45,8 @@
   },
   "[ignore]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "python.defaultInterpreterPath": "\\usr\\local\\bin\\python3",
+},
+"python.defaultInterpreterPath": "\\usr\\local\\bin\\python3",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.hovers.enabled": false,
@@ -94,7 +94,4 @@
   "gitlens.currentLine.enabled": false,
   "go.toolsManagement.autoUpdate": true,
   "git.confirmSync": false,
-  "settingsSync.ignoredExtensions": [
-    "ms-kubernetes-tools.vscode-kubernetes-tools"
-  ]
 }
