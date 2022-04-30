@@ -19,7 +19,6 @@ brew "htop"
 brew "hugo"
 brew "mackup"
 brew "mas"
-brew "mitmproxy"
 brew "node"
 brew "pyenv"
 brew "tldr"
@@ -54,7 +53,6 @@ cask "sublime-text"
 cask "suspicious-package"
 cask "syntax-highlight"
 cask "visual-studio-code"
-cask "wireshark"
 mas "Accelerate", id: 1459809092
 mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704

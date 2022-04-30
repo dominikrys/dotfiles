@@ -87,6 +87,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
   git
   colored-man-pages
+  copypath
+  copyfile
+  copybuffer
+  history
   zsh-syntax-highlighting
   zsh-autosuggestions
   zsh-completions

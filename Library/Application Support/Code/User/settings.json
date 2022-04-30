@@ -13,17 +13,13 @@
   "explorer.confirmDragAndDrop": false,
   "python.linting.pylintEnabled": true,
   "python.linting.enabled": true,
-  "editor.largeFileOptimizations": false,
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
   "grammarly.dialect": "british",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "redhat.telemetry.enabled": false,
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -45,8 +41,8 @@
   },
   "[ignore]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
-},
-"python.defaultInterpreterPath": "\\usr\\local\\bin\\python3",
+  },
+  "python.defaultInterpreterPath": "\\usr\\local\\bin\\python3",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.hovers.enabled": false,
