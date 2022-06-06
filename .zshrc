@@ -33,11 +33,8 @@ ZSH_DISABLE_COMPFIX=true
 # Set ZSH theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Fix timestaps
-HIST_STAMPS="dd/mm/yyyy"
-
 #####################################################################
-# oh-my-zsh
+# Oh My Zsh
 #####################################################################
 
 # Enable plugins
@@ -79,10 +76,15 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Configure direnv
 eval "$(direnv hook zsh)"
 
-if [[ "$OSTYPE" == 'darwin' ]]; then
-  # Don't quarantine Brew casks
-  export HOMEBREW_CASK_OPTS="--no-quarantine"
-fi
+# Configure cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
+case `uname` in
+  Darwin)
+    # Don't quarantine Brew casks
+    export HOMEBREW_CASK_OPTS="--no-quarantine"
+  ;;
+esac
 
 #####################################################################
 # Aliases
@@ -118,30 +120,32 @@ update() {
   upgrade_oh_my_zsh_custom
 }
 
-if [[ "$OSTYPE" == 'darwin' ]]; then
-  # Aliases for enabling dock resizing
-  alias dock-lock='defaults write com.apple.Dock size-immutable -bool yes; killall Dock'
-  alias dock-unlock='defaults write com.apple.Dock size-immutable -bool no; killall Dock'
-  
-  # Open file in sublime using `subl`
-  ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+case `uname` in
+  Darwin)
+    # Aliases for enabling dock resizing
+    alias dock-lock='defaults write com.apple.Dock size-immutable -bool yes; killall Dock'
+    alias dock-unlock='defaults write com.apple.Dock size-immutable -bool no; killall Dock'
+    
+    # Open file in sublime using `subl`
+    ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
-  # Extend update function with macOS tools
-  functions[original_update]=$functions[update]
-  update () {
-    echo "==> Upgrading Homebrew packages"
-    brew upgrade
-    echo "==> Cleaning unused Homebrew dependencies"
-    brew autoremove
+    # Extend update function with macOS tools
+    functions[original_update]=$functions[update]
+    update () {
+      echo "==> Upgrading Homebrew packages"
+      brew upgrade
+      echo "==> Cleaning unused Homebrew dependencies"
+      brew autoremove
 
-    original_update $@[@]
-  }
+      original_update $@[@]
+    }
 
-  # Backup installed packages
-  backup() {
+    # Backup installed packages
+    backup() {
       echo "==> Saving a list of Homebrew packages"
       brew bundle dump -f --file=~/Brewfile
       echo "==> Creating a backup with mackup"
       mackup backup -f
     }
-fi
+    ;;
+esac

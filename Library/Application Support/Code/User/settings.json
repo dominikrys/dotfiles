@@ -96,5 +96,8 @@
     "vscode-kubernetes.helm-path.mac": "/Users/dominikrys/.vs-kubernetes/tools/helm/darwin-amd64/helm",
     "vscode-kubernetes.minikube-path.mac": "/Users/dominikrys/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
     "vscode-kubernetes.kubectl-path.mac": "/Users/dominikrys/.vs-kubernetes/tools/kubectl/kubectl"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
