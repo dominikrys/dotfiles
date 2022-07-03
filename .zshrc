@@ -73,6 +73,9 @@ export UPDATE_ZSH_DAYS=999
 # Add global yarn packages to path
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# Add homebrew tools to path
+export PATH=/opt/homebrew/bin:$PATH
+
 # Configure direnv
 eval "$(direnv hook zsh)"
 
@@ -107,6 +110,16 @@ alias tpm-update='~/.tmux/plugins/tpm/bin/update_plugins all'
 
 # Alias for refreshing gitignore
 alias git-refresh-gitignore='git rm -r --cached . && git add .'
+
+# Alias for fetching and merging another branch into the current branch
+gpo() {
+  if [ -z "$1" ]
+  then
+    echo "ERROR: No branch name provided!"
+  else
+    git pull origin "$1:$1"
+  fi
+}
 
 # Alias for updating tools
 update() {
