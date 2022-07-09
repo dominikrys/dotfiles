@@ -1,3 +1,4 @@
+# zmodload zsh/zprof # Uncomment to profile startup time
 #####################################################################
 # Powerlevel10k
 #####################################################################
@@ -162,3 +163,5 @@ case `uname` in
     }
     ;;
 esac
+
+# zprof # Uncomment to profile startup time
