@@ -1,28 +1,15 @@
 {
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "git.enableSmartCommit": true,
-  "cSpell.language": "en-GB",
-  "git.inputValidation": "off",
-  "diffEditor.ignoreTrimWhitespace": false,
-  "[rust]": {
-    "editor.defaultFormatter": "matklad.rust-analyzer"
-  },
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "explorer.confirmDragAndDrop": false,
-  "python.linting.pylintEnabled": true,
-  "python.linting.enabled": true,
-  "grammarly.dialect": "british",
-  "redhat.telemetry.enabled": false,
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -33,17 +20,37 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[dotenv]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer"
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "python.defaultInterpreterPath": "\\usr\\local\\bin\\python3",
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "cSpell.language": "en-GB",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.inputValidation": "off",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.hovers.enabled": false,
   "gitlens.menus": {
@@ -70,12 +77,12 @@
     "scm": {
       "authors": true
     },
-    "scmGroupInline": {
-      "stash": true
-    },
     "scmGroup": {
       "compare": true,
       "openClose": true,
+      "stash": true
+    },
+    "scmGroupInline": {
       "stash": true
     },
     "scmItem": {
@@ -86,21 +93,24 @@
       "stash": true
     }
   },
-  "gitlens.codeLens.enabled": false,
-  "gitlens.currentLine.enabled": false,
   "go.toolsManagement.autoUpdate": true,
-  "git.confirmSync": false,
+  "grammarly.dialect": "british",
+  "markdownlint.config": {
+    "MD033": false // MD033/no-inline-html
+  },
+  "python.defaultInterpreterPath": "\\usr\\local\\bin\\python3",
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "redhat.telemetry.enabled": false,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.scrollback": 10000,
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "vs-kubernetes": {
     "vs-kubernetes.crd-code-completion": "disabled",
     "vscode-kubernetes.helm-path.mac": "/Users/dominikrys/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-    "vscode-kubernetes.minikube-path.mac": "/Users/dominikrys/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-    "vscode-kubernetes.kubectl-path.mac": "/Users/dominikrys/.vs-kubernetes/tools/kubectl/kubectl"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    "vscode-kubernetes.kubectl-path.mac": "/Users/dominikrys/.vs-kubernetes/tools/kubectl/kubectl",
+    "vscode-kubernetes.minikube-path.mac": "/Users/dominikrys/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
   }
 }

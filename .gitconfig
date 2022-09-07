@@ -5,3 +5,5 @@
 	rebase = false
 [init]
   defaultBranch = main
+[push]
+	autoSetupRemote = true

@@ -28,3 +28,6 @@
 [submodule ".tmux/plugins/tmux-mem-cpu-load"]
 	path = .tmux/plugins/tmux-mem-cpu-load
 	url = https://git::@github.com/thewtex/tmux-mem-cpu-load
+[submodule ".oh-my-zsh/custom/plugins/zshmarks"]
+	path = .oh-my-zsh/custom/plugins/zshmarks
+	url = https://github.com/jocelynmallon/zshmarks.git

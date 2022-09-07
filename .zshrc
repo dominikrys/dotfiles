@@ -54,6 +54,7 @@ plugins=(
   zsh-syntax-highlighting
   zsh-autosuggestions
   zsh-completions
+  zshmarks
   )
 
 # Enable OMZ
