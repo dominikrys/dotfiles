@@ -31,3 +31,6 @@
 [submodule ".oh-my-zsh/custom/plugins/zshmarks"]
 	path = .oh-my-zsh/custom/plugins/zshmarks
 	url = https://github.com/jocelynmallon/zshmarks.git
+[submodule ".oh-my-zsh/custom/plugins/autoupdate"]
+	path = .oh-my-zsh/custom/plugins/autoupdate
+	url = https://github.com/tamcore/autoupdate-oh-my-zsh-plugins.git
