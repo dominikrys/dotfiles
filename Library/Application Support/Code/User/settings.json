@@ -45,53 +45,15 @@
   },
   "cSpell.language": "en-GB",
   "diffEditor.ignoreTrimWhitespace": false,
+  "eslint.format.enable": true,
   "explorer.confirmDragAndDrop": false,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.inputValidation": "off",
   "gitlens.codeLens.enabled": false,
   "gitlens.currentLine.enabled": false,
-  "gitlens.hovers.currentLine.over": "line",
-  "gitlens.hovers.enabled": false,
   "gitlens.menus": {
-    "editor": {
-      "blame": false,
-      "clipboard": true,
-      "compare": true,
-      "history": false,
-      "remote": false
-    },
-    "editorGroup": false,
-    "editorTab": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": true
-    },
-    "explorer": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": true
-    },
-    "scm": {
-      "authors": true
-    },
-    "scmGroup": {
-      "compare": true,
-      "openClose": true,
-      "stash": true
-    },
-    "scmGroupInline": {
-      "stash": true
-    },
-    "scmItem": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": false,
-      "stash": true
-    }
+    "editorGroup": false
   },
   "go.toolsManagement.autoUpdate": true,
   "grammarly.dialect": "british",
@@ -106,11 +68,5 @@
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.scrollback": 10000,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "vs-kubernetes": {
-    "vs-kubernetes.crd-code-completion": "disabled",
-    "vscode-kubernetes.helm-path.mac": "/Users/dominikrys/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-    "vscode-kubernetes.kubectl-path.mac": "/Users/dominikrys/.vs-kubernetes/tools/kubectl/kubectl",
-    "vscode-kubernetes.minikube-path.mac": "/Users/dominikrys/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
-  }
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
