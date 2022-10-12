@@ -83,4 +83,7 @@ mackup uninstall
 
 ### TODO
 
-- [ ] Properly link/structure files in `misc`
+- Properly link/structure files in `misc`
+- Add install for `logitech-options`, omz
+- Add screenshots for how dock and menu bar look
+- Add rectangle settings
