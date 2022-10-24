@@ -1,6 +1,6 @@
 {
 	"microbreakDuration": 20000,
-	"microbreakInterval": 1500000,
+	"microbreakInterval": 1200000,
 	"breakDuration": 300000,
 	"breakInterval": 2,
 	"breakNotification": true,
@@ -26,7 +26,7 @@
 	"audio": "crystal-glass",
 	"volume": 1,
 	"fullscreen": false,
-	"ideas": true,
+	"ideas": false,
 	"naturalBreaks": true,
 	"naturalBreaksInactivityResetTime": 300000,
 	"allScreens": true,
