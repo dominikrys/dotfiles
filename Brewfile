@@ -10,10 +10,10 @@ brew "xz"
 brew "asciinema"
 brew "asdf"
 brew "bash"
+brew "python@3.9"
 brew "openjdk"
 brew "bfg"
 brew "brew-cask-completion"
-brew "python@3.9"
 brew "cmake"
 brew "cookiecutter"
 brew "direnv"
@@ -38,16 +38,18 @@ cask "calibre"
 cask "caption"
 cask "docker"
 cask "firefox"
-cask "google-chrome"
 cask "gimp"
+cask "google-chrome"
 cask "hex-fiend"
 cask "iina"
 cask "insomnia"
 cask "intellij-idea-ce"
 cask "iterm2"
+cask "kid3"
 cask "kindle-previewer"
 cask "koodo-reader"
 cask "ledger-live"
+cask "logitech-options"
 cask "logitech-unifying"
 cask "monitorcontrol"
 cask "musicbrainz-picard"
@@ -68,12 +70,13 @@ mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "Dark Reader for Safari", id: 1438243180
-mas "Honey", id: 1472777122
 mas "Hover for Safari", id: 1540705431
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Messenger", id: 1480068668
+mas "PayPal Honey", id: 1472777122
 mas "Right Click", id: 1364038646
+mas "Streaks", id: 963034692
 mas "The Unarchiver", id: 425424353
 mas "Tomato 2", id: 1494210770
 mas "WhatsApp", id: 1147396723

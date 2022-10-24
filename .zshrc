@@ -38,6 +38,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Oh My Zsh
 #####################################################################
 
+# Make OMZ work with symlinked custom directory from mackup (https://github.com/lra/mackup/issues/1384#issuecomment-766814785)
+ZSH_CUSTOM=${HOME}/dev/dotfiles/.oh-my-zsh/custom
+
 # Enable plugins
 plugins=(
   # Built-in
@@ -61,12 +64,12 @@ plugins=(
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
+# Disable autoupdate zsh plugin automatic updating
+zstyle ':omz:update' frequency 9999
+export UPDATE_ZSH_DAYS=9999
+
 # Disable OMZ automatic updates
 zstyle ':omz:update' mode disabled
-export DISABLE_AUTO_UPDATE="true"
-
-# Disable autoupdate-zsh-plugin automatic updating
-export UPDATE_ZSH_DAYS=999
 
 #####################################################################
 # Configure tools
