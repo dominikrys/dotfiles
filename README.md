@@ -80,7 +80,3 @@ Copy back any synced config files to their original place
 ```bash
 mackup uninstall
 ```
-
-### TODO
-
-- Add install for omz
