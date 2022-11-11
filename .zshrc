@@ -132,10 +132,11 @@ update() {
   tpm-update 
   echo "==> Updating tldr"
   tldr --update
-  echo "==> Updating oh-my-zsh"
-  omz update
   echo "==> Updating oh-my-zsh plugins"
   upgrade_oh_my_zsh_custom
+  # Keep OMZ update at the end as it sometimes kills the script
+  echo "==> Updating oh-my-zsh"
+  omz update
 }
 
 case `uname` in
@@ -148,14 +149,14 @@ case `uname` in
     ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
     # Extend update function with macOS tools
-    functions[original_update]=$functions[update]
+    functions[base_update]=$functions[update]
     update () {
       echo "==> Upgrading Homebrew packages"
       brew upgrade
       echo "==> Cleaning unused Homebrew dependencies"
       brew autoremove
 
-      original_update $@[@]
+      base_update $@[@]
     }
 
     # Backup installed packages

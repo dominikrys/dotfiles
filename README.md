@@ -33,6 +33,14 @@ gunzip terminfo.src.gz
 rm terminfo.src
 ```
 
+### Configure Hidden macOS settings
+
+Remove dock auto-hide animation and delay.
+
+```plaintext
+defaults write com.apple.dock autohide-time-modifier -int 0; defaults write com.apple.dock autohide-delay -float 0; killall Dock
+```
+
 ## Making backups & maintenance
 
 > To add more applications to be backed up, include them in `.mackup.cfg`.
