@@ -10,19 +10,22 @@ Clone with submodules
 git clone --recurse-submodules -j8 git@github.com:dominikrys/dotfiles.git
 ```
 
-Fix permissions after cloning
+### If the repo is already cloned
 
-```bash
-chmod -R 775 dotfiles
-```
-
-Pull submodules if the repo is already cloned
+Pull submodules
 
 ```bash
 git submodule update --init --recursive
 ```
 
 ## Post-Cloning Steps
+
+### Run mackup
+
+```bash
+cp .mackup.cfg ~
+mackup restore
+```
 
 ### Install tmux-256color on macOS
 
@@ -40,6 +43,21 @@ Remove dock auto-hide animation and delay.
 ```plaintext
 defaults write com.apple.dock autohide-time-modifier -int 0; defaults write com.apple.dock autohide-delay -float 0; killall Dock
 ```
+
+### Install oh-my-zsh
+
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Install font for p10k
+
+[Font install instructions](https://github.com/romkatv/powerlevel10k#manual-font-installation)
+
+
+### Extra
+
+Go through the `misc` directory to see if anything has been missed.
 
 ## Making backups & maintenance
 
@@ -88,3 +106,7 @@ Copy back any synced config files to their original place
 ```bash
 mackup uninstall
 ```
+
+## TODO
+
+- Automate font install
