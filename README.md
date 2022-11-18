@@ -38,10 +38,16 @@ rm terminfo.src
 
 ### Configure Hidden macOS settings
 
-Remove dock auto-hide animation and delay.
+```bash
+# Always show hidden files in finder
+defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder; 
 
-```plaintext
-defaults write com.apple.dock autohide-time-modifier -int 0; defaults write com.apple.dock autohide-delay -float 0; killall Dock
+# Remove dock auto-hide animation and delay
+defaults write com.apple.dock autohide-time-modifier -int 0; defaults write com.apple.dock autohide-delay -float 0; killall Dock 
+
+# Use list view in all Finder windows by default
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+sudo find / -name ".DS_Store" -exec rm {} \; # Clear remembered views
 ```
 
 ### Install oh-my-zsh
@@ -54,10 +60,11 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 [Font install instructions](https://github.com/romkatv/powerlevel10k#manual-font-installation)
 
-
 ### Extra
 
 Go through the `misc` directory to see if anything has been missed.
+
+[Execute sudo without password](https://askubuntu.com/a/147265).
 
 ## Making backups & maintenance
 
