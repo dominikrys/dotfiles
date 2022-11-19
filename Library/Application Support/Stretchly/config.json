@@ -8,7 +8,7 @@
 	"breakNotificationInterval": 30000,
 	"microbreakNotificationInterval": 10000,
 	"microbreak": true,
-	"break": true,
+	"break": false,
 	"microbreakStrictMode": false,
 	"breakStrictMode": false,
 	"morningHour": 6,
@@ -442,15 +442,7 @@
 		}
 	],
 	"showBreaksAsRegularWindows": false,
-	"appExclusions": [
-		{
-			"rule": "pause",
-			"active": true,
-			"commands": [
-				"/Applications/zoom.us.app"
-			]
-		}
-	],
+	"appExclusions": [],
 	"appExclusionsCheckInterval": 30000,
 	"pauseForSuspendOrLock": true,
 	"pauseBreaksShortcut": "",
