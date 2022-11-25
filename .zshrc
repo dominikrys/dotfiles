@@ -16,9 +16,6 @@ fi
 # Solve issues with OMZ updates and P10k
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-# Always show Kubernetes context
-# unset POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND
-
 #####################################################################
 # ZSH
 #####################################################################
@@ -45,15 +42,24 @@ ZSH_CUSTOM=${HOME}/dev/dotfiles/.oh-my-zsh/custom
 plugins=(
   # Built-in
   asdf
+  brew
   colored-man-pages
   copybuffer
   copyfile
   copypath
+  direnv
+  fzf
   git
+  golang
   history
   kubectl
+  kubectl
+  rust
+  terraform
+  yarn
   # Custom
   autoupdate
+  fzf-tab
   zsh-syntax-highlighting
   zsh-autosuggestions
   zsh-completions
@@ -75,22 +81,13 @@ zstyle ':omz:update' mode disabled
 # Configure tools
 #####################################################################
 
-# Add global yarn packages to path
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-# Add homebrew tools to path
-export PATH=/opt/homebrew/bin:$PATH
-
-# Configure direnv
-eval "$(direnv hook zsh)"
-
-# Configure cargo
-export PATH="$HOME/.cargo/bin:$PATH"
-
 case `uname` in
   Darwin)
     # Don't quarantine Brew casks
     export HOMEBREW_CASK_OPTS="--no-quarantine"
+
+    # Disable brew analytics
+    export HOMEBREW_NO_ANALYTICS=1
   ;;
 esac
 
@@ -126,6 +123,9 @@ gpo() {
   fi
 }
 
+# kubectx alias
+alias kctx='kubectx'
+
 # Alias for updating tools
 update() {
   echo "==> Updating TPM"
@@ -155,6 +155,8 @@ case `uname` in
       brew upgrade
       echo "==> Cleaning unused Homebrew dependencies"
       brew autoremove
+      # echo "==> Updating gcloud"
+      # gcloud components update --quiet
 
       base_update $@[@]
     }
@@ -168,5 +170,18 @@ case `uname` in
     }
     ;;
 esac
+
+#####################################################################
+# Optional
+#####################################################################
+
+# Always show Kubernetes context
+# unset POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND
+
+# Confiugre GCloud completions
+# source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+
+# Make kubectx not go into fzf
+# export KUBECTX_IGNORE_FZF=1
 
 # zprof # Uncomment to profile startup time
