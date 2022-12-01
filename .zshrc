@@ -41,6 +41,7 @@ ZSH_CUSTOM=${HOME}/dev/dotfiles/.oh-my-zsh/custom
 # Enable plugins
 plugins=(
   # Built-in
+  aliases
   asdf
   brew
   colored-man-pages
@@ -48,13 +49,16 @@ plugins=(
   copyfile
   copypath
   direnv
+  docker
   fzf
+  gcloud
   git
   golang
   history
   kubectl
-  kubectl
+  nvm
   rust
+  sublime
   terraform
   yarn
   # Custom
@@ -144,9 +148,6 @@ case `uname` in
     # Aliases for enabling dock resizing
     alias dock-lock='defaults write com.apple.Dock size-immutable -bool yes; killall Dock'
     alias dock-unlock='defaults write com.apple.Dock size-immutable -bool no; killall Dock'
-    
-    # Open file in sublime using `subl`
-    ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
     # Extend update function with macOS tools
     functions[base_update]=$functions[update]
