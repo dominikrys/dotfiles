@@ -43,6 +43,7 @@ plugins=(
   # Built-in
   aliases
   asdf
+  aws
   brew
   colored-man-pages
   copybuffer
@@ -54,6 +55,7 @@ plugins=(
   gcloud
   git
   golang
+  helm
   history
   kubectl
   nvm
