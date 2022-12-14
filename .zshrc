@@ -101,7 +101,7 @@ esac
 # Aliases
 #####################################################################
 
-# Alias for scanning the current directory and adding git submodules (https://stackoverflow.com/a/10607225/13749561)
+# Scan the current directory and add found git submodules (https://stackoverflow.com/a/10607225/13749561)
 git-add-submodules() {
   for x in $(find . -mindepth 1 -type d) ; do
     if [ -d "${x}/.git" ] ; then
@@ -113,13 +113,13 @@ git-add-submodules() {
   done
 }
 
-# Alais for updating TPM plugins
+# Update TPM plugins
 alias tpm-update='~/.tmux/plugins/tpm/bin/update_plugins all'
 
-# Alias for refreshing gitignore
+# Refresh .gitignore
 alias git-refresh-gitignore='git rm -r --cached . && git add .'
 
-# Alias for fetching and merging another branch into the current branch
+# Fetch and merge the specified branch into the current branch
 gpo() {
   if [ -z "$1" ]
   then
@@ -129,10 +129,20 @@ gpo() {
   fi
 }
 
-# kubectx alias
+# Fetch and rebase the specified branch into the current branch
+gro() {
+  if [ -z "$1" ]
+  then
+    echo "ERROR: No branch name provided!"
+  else
+    git pull origin --rebase "$1:$1"
+  fi
+}
+
+# Short kubectx
 alias kctx='kubectx'
 
-# Alias for updating tools
+# Update tools
 update() {
   echo "==> Updating TPM"
   tpm-update 
