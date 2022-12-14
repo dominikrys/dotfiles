@@ -181,10 +181,9 @@ esac
 # Always show Kubernetes context
 # unset POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND
 
-# Confiugre GCloud completions
-# source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-
-# Make kubectx not go into fzf
-# export KUBECTX_IGNORE_FZF=1
+# Source local-only changes
+if [[ -f "$HOME/.localrc" ]]; then
+  source "$HOME/.localrc"
+fi
 
 # zprof # Uncomment to profile startup time

@@ -47,6 +47,14 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "eslint.format.enable": true,
   "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    "**/.DS_Store": false,
+    "**/.git": false,
+    "**/.hg": false,
+    "**/.svn": false,
+    "**/CVS": false,
+    "**/Thumbs.db": false
+  },
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.inputValidation": "off",
@@ -56,7 +64,8 @@
     "editorGroup": false
   },
   "go.toolsManagement.autoUpdate": true,
-  "grammarly.dialect": "british",
+  "grammarly.config.documentDialect": "british",
+  "hadolint.hadolintPath": "/usr/local/bin/hadolint",
   "markdownlint.config": {
     "MD033": false // MD033/no-inline-html
   },
@@ -68,6 +77,5 @@
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.scrollback": 10000,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "hadolint.hadolintPath": "/usr/local/bin/hadolint"
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
