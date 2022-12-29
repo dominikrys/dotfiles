@@ -49,10 +49,10 @@
   "explorer.confirmDragAndDrop": false,
   "files.exclude": {
     "**/.DS_Store": false,
-    "**/.git": false,
+    "**/.git": true,
     "**/.hg": false,
-    "**/.svn": false,
-    "**/CVS": false,
+    "**/.svn": true,
+    "**/CVS": true,
     "**/Thumbs.db": false
   },
   "git.confirmSync": false,

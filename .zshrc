@@ -72,16 +72,15 @@ plugins=(
   zshmarks
   )
 
+# Disable OMZ automatic updates
+zstyle ':omz:update' mode disabled
+
+# Disable autoupdate zsh plugin automatic updating
+export UPDATE_ZSH_DAYS=9999
+
 # Enable OMZ
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
-
-# Disable autoupdate zsh plugin automatic updating
-zstyle ':omz:update' frequency 9999
-export UPDATE_ZSH_DAYS=9999
-
-# Disable OMZ automatic updates
-zstyle ':omz:update' mode disabled
 
 #####################################################################
 # Configure tools
