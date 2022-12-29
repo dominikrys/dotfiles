@@ -1,8 +1,8 @@
 [user]
-	name = Dominik Rys
-	email = dominik.j.rys@gmail.com
+  name = Dominik Rys
+  email = dominik.j.rys@gmail.com
 [pull]
-	rebase = false
+  rebase = true
 [init]
   defaultBranch = main
 [push]

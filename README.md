@@ -27,44 +27,27 @@ cp .mackup.cfg ~
 mackup restore
 ```
 
-### Install tmux-256color on macOS
+### Run Setup Script on macOS
 
 ```bash
-curl -LO https://invisible-island.net/datafiles/current/terminfo.src.gz
-gunzip terminfo.src.gz
-/usr/bin/tic -xe tmux-256color terminfo.src
-rm terminfo.src
+./macos-setup.sh
 ```
-
-### Configure Hidden macOS settings
-
-```bash
-# Always show hidden files in finder
-defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder; 
-
-# Remove dock auto-hide animation and delay
-defaults write com.apple.dock autohide-time-modifier -int 0; defaults write com.apple.dock autohide-delay -float 0; killall Dock 
-
-# Use list view in all Finder windows by default
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-sudo find / -name ".DS_Store" -exec rm {} \; # Clear remembered views
-```
-
-### Install oh-my-zsh
-
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-### Install font for p10k
-
-[Font install instructions](https://github.com/romkatv/powerlevel10k#manual-font-installation)
 
 ### Extra
 
-Go through the `misc` directory to see if anything has been missed.
+- [Install the font for P10k](https://github.com/romkatv/powerlevel10k#manual-font-installation).
 
-[Execute sudo without password](https://askubuntu.com/a/147265).
+- Go through the `misc` directory for anything that needs to be restored manually.
+
+- [Set up executing sudo without a password](https://askubuntu.com/a/147265).
+
+- Configure local-only changes in `~/.localrc.zsh`
+
+- Blacklist some local-only changes in git:
+
+  ```sh
+  git update-index --assume-unchanged .tool-versions
+  ```
 
 ## Making backups & maintenance
 

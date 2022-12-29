@@ -166,10 +166,14 @@ case `uname` in
     update () {
       echo "==> Upgrading Homebrew packages"
       brew upgrade
+
       echo "==> Cleaning unused Homebrew dependencies"
       brew autoremove
-      # echo "==> Updating gcloud"
-      # gcloud components update --quiet
+
+      if which gcloud >/dev/null; then
+        echo "==> Updating gcloud"
+        gcloud components update --quiet
+      fi
 
       base_update $@[@]
     }
@@ -178,6 +182,7 @@ case `uname` in
     backup() {
       echo "==> Saving a list of Homebrew packages"
       brew bundle dump -f --file=~/Brewfile
+
       echo "==> Creating a backup with mackup"
       mackup backup -f
     }
@@ -188,12 +193,16 @@ esac
 # Optional
 #####################################################################
 
+# Source local-only changes
+if [[ -f "$HOME/.localrc.zsh" ]]; then
+  source "$HOME/.localrc.zsh"
+fi
+
 # Always show Kubernetes context
 # unset POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND
 
-# Source local-only changes
-if [[ -f "$HOME/.localrc" ]]; then
-  source "$HOME/.localrc"
-fi
+#####################################################################
+# End of customisation
+#####################################################################
 
 # zprof # Uncomment to profile startup time
