@@ -106,6 +106,12 @@ fi
 # Aliases
 #####################################################################
 
+alias kctx='kubectx'
+alias lzd='lazydocker'
+alias cls='tput reset' # Clear screen
+alias tpm-update='~/.tmux/plugins/tpm/bin/update_plugins all' # Update TPM plugins
+alias git-refresh-gitignore='git rm -r --cached . && git add .' # Refresh .gitignore
+
 # Scan the current directory and add found git submodules (https://stackoverflow.com/a/10607225/13749561)
 git-add-submodules() {
   for x in $(find . -mindepth 1 -type d) ; do
@@ -117,12 +123,6 @@ git-add-submodules() {
     fi
   done
 }
-
-# Update TPM plugins
-alias tpm-update='~/.tmux/plugins/tpm/bin/update_plugins all'
-
-# Refresh .gitignore
-alias git-refresh-gitignore='git rm -r --cached . && git add .'
 
 # Fetch and merge the specified branch into the current branch
 gpo() {
@@ -144,9 +144,6 @@ gro() {
   fi
 }
 
-# Short kubectx
-alias kctx='kubectx'
-
 # Update tools
 update() {
   echo "==> Updating TPM"
@@ -160,6 +157,7 @@ update() {
   omz update
 }
 
+# Platform-specific aliases
 case `uname` in
   Darwin)
     # Aliases for enabling dock resizing
