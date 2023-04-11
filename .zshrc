@@ -108,9 +108,10 @@ fi
 
 alias kctx='kubectx'
 alias lzd='lazydocker'
-alias cls='tput reset' # Clear screen
-alias tpm-update='~/.tmux/plugins/tpm/bin/update_plugins all' # Update TPM plugins
+alias cls='tput reset'                                          # Clear screen
+alias tpm-update='~/.tmux/plugins/tpm/bin/update_plugins all'   # Update TPM plugins
 alias git-refresh-gitignore='git rm -r --cached . && git add .' # Refresh .gitignore
+alias gstst='git stash --keep-index'                            # Stash unstaged changes
 
 # Scan the current directory and add found git submodules (https://stackoverflow.com/a/10607225/13749561)
 git-add-submodules() {
