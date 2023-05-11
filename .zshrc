@@ -174,11 +174,6 @@ case `uname` in
       echo "==> Cleaning unused Homebrew dependencies"
       brew autoremove
 
-      if which gcloud >/dev/null; then
-        echo "==> Updating gcloud"
-        gcloud components update --quiet
-      fi
-
       base_update $@[@]
     }
 

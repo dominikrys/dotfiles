@@ -2,7 +2,7 @@
   name = Dominik Rys
   email = dominik.j.rys@gmail.com
 [pull]
-  rebase = true
+  rebase = false
 [init]
   defaultBranch = main
 [push]
