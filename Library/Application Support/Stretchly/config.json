@@ -451,11 +451,16 @@
 	"screen": "primary",
 	"timeToBreakInTray": false,
 	"currentTimeInBreaks": false,
+	"showTrayIcon": true,
+	"skipToNextScheduledBreakShortcut": "",
+	"skipToNextMiniBreakShortcut": "",
+	"skipToNextLongBreakShortcut": "",
+	"resetBreaksShortcut": "",
 	"pauseBreaksShortcut": "",
 	"resumeBreaksShortcut": "",
 	"__internal__": {
 		"migrations": {
-			"version": "1.14.0"
+			"version": "1.15.1"
 		}
 	}
 }

@@ -66,9 +66,10 @@ plugins=(
   # Custom
   autoupdate
   fzf-tab
-  zsh-syntax-highlighting
   zsh-autosuggestions
+  zsh-autoswitch-virtualenv
   zsh-completions
+  zsh-syntax-highlighting
   zshmarks
   )
 
