@@ -64,10 +64,10 @@ plugins=(
   terraform
   yarn
   # Custom
+  autoswitch_virtualenv
   autoupdate
   fzf-tab
   zsh-autosuggestions
-  zsh-autoswitch-virtualenv
   zsh-completions
   zsh-syntax-highlighting
   zshmarks
