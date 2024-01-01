@@ -1,18 +1,16 @@
 # Dotfiles
 
-Personal dotfiles for development on macOS and Linux, managed using [Mackup](https://github.com/lra/mackup).
+Personal dotfiles for development on macOS and Linux managed using [Mackup](https://github.com/lra/mackup).
 
 ## Cloning
 
-Clone with submodules
+Clone with submodules:
 
 ```bash
 git clone --recurse-submodules -j8 git@github.com:dominikrys/dotfiles.git
 ```
 
-### If the repo is already cloned
-
-Pull submodules
+If the repo is already cloned, pull submodules:
 
 ```bash
 git submodule update --init --recursive
@@ -20,20 +18,20 @@ git submodule update --init --recursive
 
 ## Post-Cloning Steps
 
-### Run mackup
+Run mackup
 
 ```bash
 cp .mackup.cfg ~
 mackup restore
 ```
 
-### Run Setup Script on macOS
+Run Setup Script on macOS
 
 ```bash
 ./macos-setup.sh
 ```
 
-### Extra
+Make manual changes:
 
 - [Install the font for P10k](https://github.com/romkatv/powerlevel10k#manual-font-installation).
 
@@ -42,6 +40,8 @@ mackup restore
 - [Set up executing sudo without a password](https://askubuntu.com/a/147265).
 
 - Configure local-only changes in `~/.localrc.zsh`
+
+- Configure iTerm to use the settings under `Library/Preferences/com.googlecode.iterm2.plist`
 
 - Blacklist some local-only changes in git:
 
@@ -79,12 +79,6 @@ Restore your application settings on a newly installed workstation
 mackup restore
 ```
 
-Show steps without executing
-
-```bash
-mackup backup -n
-```
-
 Display the list of applications supported by Mackup
 
 ```bash
@@ -96,7 +90,3 @@ Copy back any synced config files to their original place
 ```bash
 mackup uninstall
 ```
-
-## TODO
-
-- Automate font install
