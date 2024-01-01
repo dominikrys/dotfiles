@@ -78,8 +78,6 @@
   },
   "python.defaultInterpreterPath": "\\usr\\local\\bin\\python3",
   "python.formatting.provider": "black",
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
   "redhat.telemetry.enabled": false,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontFamily": "MesloLGS NF",
