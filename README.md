@@ -51,7 +51,7 @@ Make manual changes
 
 - Go through the `misc` and company-specific directories for anything that needs to be restored manually.
 
-- Configure system settings, Zoom settings, widgets sidebar, dock, menu bar, run all apps, 
+- Configure system settings, Zoom settings, widgets sidebar, dock, menu bar, Finder sidebar, run all apps.
 
 ## Making backups & maintenance
 
