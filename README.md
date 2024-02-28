@@ -73,6 +73,7 @@ Fix a git submodule in a `dirty` state
 
 ```bash
 git submodule foreach --recursive git checkout .
+git submodule foreach --recursive git checkout .
 ```
 
 ### Useful Mackup commands
