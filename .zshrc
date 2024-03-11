@@ -148,12 +148,17 @@ gro() {
 update() {
   echo "==> Updating TPM"
   tpm-update 
+
   echo "==> Updating tldr"
   tldr --update
+
   echo "==> Updating oh-my-zsh plugins"
   upgrade_oh_my_zsh_custom
-  # Keep OMZ update at the end as it sometimes kills the script
+
+  # Keep updateing OMZ at the end as it sometimes kills the script
   echo "==> Updating oh-my-zsh"
+  # Pull the repo to get around error `error: 'custom/example.zsh' is beyond a symbolic link`
+  (cd ~/.oh-my-zsh && git checkout master && git pull)
   omz update
 }
 
