@@ -18,36 +18,40 @@ git submodule update --init --recursive
 
 ## Post-Cloning Steps
 
-Run mackup
+Run Setup Script on macOS:
+
+```bash
+./macos-setup.sh
+```
+
+Run mackup:
 
 ```bash
 cp .mackup.cfg ~
 mackup restore
 ```
 
-Run Setup Script on macOS
-
-```bash
-./macos-setup.sh
-```
-
-Make manual changes:
+Make manual changes
 
 - [Install the font for P10k](https://github.com/romkatv/powerlevel10k#manual-font-installation).
-
-- Go through the `misc` directory for anything that needs to be restored manually.
 
 - [Set up executing sudo without a password](https://askubuntu.com/a/147265).
 
 - Configure local-only changes in `~/.localrc.zsh`
 
-- Configure iTerm to use the settings under `Library/Preferences/com.googlecode.iterm2.plist`
+- Install applications from the Brewfile.
+
+- Configure iTerm to use the settings under `~/dev/dotfiles/Library/Preferences/com.googlecode.iterm2.plist`
 
 - Blacklist some local-only changes in git:
 
   ```sh
   git update-index --assume-unchanged .tool-versions
   ```
+
+- Go through the `misc` and company-specific directories for anything that needs to be restored manually.
+
+- Configure system settings, Zoom settings, widgets sidebar, dock, menu bar, Finder sidebar, run all apps.
 
 ## Making backups & maintenance
 
@@ -68,6 +72,7 @@ git-add-submodules
 Fix a git submodule in a `dirty` state
 
 ```bash
+git submodule foreach --recursive git checkout .
 git submodule foreach --recursive git checkout .
 ```
 
