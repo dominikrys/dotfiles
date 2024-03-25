@@ -53,6 +53,8 @@ Make manual changes
 
 - Configure system settings, Zoom settings, widgets sidebar, dock, menu bar, Finder sidebar, run all apps.
 
+- Set up automation to run the Logseq backup script: [docs](https://stackoverflow.com/questions/36854193/scheduling-a-terminal-command-or-script-file-to-run-daily-at-a-specific-time-mac)
+
 ## Making backups & maintenance
 
 > To add more applications to be backed up, include them in `.mackup.cfg`.

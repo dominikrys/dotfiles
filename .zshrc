@@ -144,6 +144,16 @@ gro() {
   fi
 }
 
+# Toggle notch using znotch
+toggle-notch() {
+  if [ ! -d "/Applications/zNotch.app" ]; then
+    echo "zNotch not installed."
+    return 0
+  fi
+
+  open 'xyz.kondor.znotch://v1/manage?action=toggle'
+}
+
 # Update tools
 update() {
   echo "==> Updating TPM"
