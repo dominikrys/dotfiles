@@ -126,22 +126,28 @@ git-add-submodules() {
 
 # Fetch and merge the specified branch into the current branch
 gpo() {
-  if [ -z "$1" ]
+  BRANCH_NAME="$1"
+
+  if [ -z "$BRANCH_NAME" ]
   then
     echo "ERROR: No branch name provided!"
-  else
-    git pull origin "$1:$1"
+    exit 1
   fi
+  
+  git pull origin "$BRANCH_NAME:$BRANCH_NAME"
 }
 
 # Fetch and rebase the specified branch into the current branch
 gro() {
-  if [ -z "$1" ]
+  BRANCH_NAME="$1"
+
+  if [ -z "$BRANCH_NAME" ]
   then
     echo "ERROR: No branch name provided!"
-  else
-    git pull origin --rebase "$1:$1"
+    exit 1
   fi
+  
+  git pull origin --rebase "$BRANCH_NAME:$BRANCH_NAME"
 }
 
 # Toggle notch using znotch
@@ -152,6 +158,26 @@ toggle-notch() {
   fi
 
   open 'xyz.kondor.znotch://v1/manage?action=toggle'
+}
+
+# Rebase dependabot PRs in specified repo
+rebase-dependabot() {
+  REPO="$1"
+
+  if [ -z "$REPO" ]
+  then
+    echo "ERROR: No repo name provided! The repo name format is `<org>/<repo>`"
+    exit 1
+  fi
+
+  gh search prs \
+    --repo $REPO \
+    --state open \
+    --label dependencies \
+    --limit 200 \
+    --json "url" --jq ".[] | .url" \
+  | xargs -n 1 -I{} \
+  gh pr comment -b "@dependabot rebase" {}
 }
 
 # Update tools
