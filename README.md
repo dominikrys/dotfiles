@@ -78,6 +78,17 @@ git submodule foreach --recursive git checkout .
 git submodule foreach --recursive git checkout .
 ```
 
+Fix updating Oh My Zsh ([source](https://github.com/lra/mackup/issues/1384#issuecomment-512667195)): from the `~/.oh-my-zsh` directory, run:
+
+```sh
+git checkout -b my-custom
+git add .
+git commit -m "fix mackup"
+git checkout master
+upgrade_oh_my_zsh
+git merge my-custom
+```
+
 ### Useful Mackup commands
 
 Restore your application settings on a newly installed workstation
