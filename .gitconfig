@@ -10,6 +10,6 @@
 [rerere]
 	enabled = true
 [branch]
-	sort = -commiterdate
+	sort = -committerdate
 [core]
 	mergeoptions = --no-edit

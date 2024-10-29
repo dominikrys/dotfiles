@@ -42,7 +42,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "cSpell.language": "en-GB",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -58,7 +58,7 @@
   },
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  "git.inputValidation": "off",
+  "git.inputValidation": true,
   "gitlens.codeLens.enabled": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.menus": {
@@ -85,5 +85,6 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
-  }
+  },
+  "application.shellEnvironmentResolutionTimeout": 15
 }
