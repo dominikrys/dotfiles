@@ -448,6 +448,11 @@
 	"appExclusionsCheckInterval": 30000,
 	"pauseForSuspendOrLock": true,
 	"pauseBreaksToggleShortcut": "",
+	"pauseBreaksFor30MinutesShortcut": "",
+	"pauseBreaksFor1HourShortcut": "",
+	"pauseBreaksFor2HoursShortcut": "",
+	"pauseBreaksFor5HoursShortcut": "",
+	"pauseBreaksUntilMorningShortcut": "",
 	"screen": "primary",
 	"timeToBreakInTray": false,
 	"currentTimeInBreaks": false,
@@ -456,11 +461,12 @@
 	"skipToNextMiniBreakShortcut": "",
 	"skipToNextLongBreakShortcut": "",
 	"resetBreaksShortcut": "",
+	"showBreakActionsInStrictMode": false,
 	"pauseBreaksShortcut": "",
 	"resumeBreaksShortcut": "",
 	"__internal__": {
 		"migrations": {
-			"version": "1.15.1"
+			"version": "1.16.0"
 		}
 	}
 }

@@ -58,7 +58,7 @@
   },
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  "git.inputValidation": "off",
+  "git.inputValidation": true,
   "gitlens.codeLens.enabled": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.menus": {
