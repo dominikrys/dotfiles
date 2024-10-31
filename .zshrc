@@ -228,6 +228,8 @@ case `uname` in
     ;;
 esac
 
+alias gempty='git commit --allow-empty -m "Empty commit"'
+
 #####################################################################
 # Optional
 #####################################################################
@@ -239,6 +241,12 @@ fi
 
 # Always show Kubernetes context
 # unset POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND
+
+#####################################################################
+# Useful commands
+#####################################################################
+
+# `als` -> See aliases
 
 #####################################################################
 # End of customisation
