@@ -1,4 +1,5 @@
 # zmodload zsh/zprof # Uncomment to profile startup time
+
 #####################################################################
 # Powerlevel10k
 #####################################################################
@@ -22,8 +23,12 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # Compinstall config
 zstyle :compinstall filename "/Users/$USER/.zshrc"
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit 
+# if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+# 	compinit;
+# else
+# 	compinit -C;
+# fi;
 
 # Suppress compilation warnings
 ZSH_DISABLE_COMPFIX=true
@@ -44,7 +49,6 @@ plugins=(
   aliases
   asdf
   brew
-  colored-man-pages
   copybuffer
   copyfile
   copypath
@@ -54,13 +58,8 @@ plugins=(
   gcloud
   git
   golang
-  helm
   kubectl
-  nvm
-  rust
   sublime
-  terraform
-  yarn
   # Custom
   autoswitch_virtualenv
   autoupdate
@@ -74,7 +73,7 @@ plugins=(
 # Disable OMZ automatic updates
 zstyle ':omz:update' mode disabled
 
-# Disable autoupdate zsh plugin automatic updating
+# Disable autoupdate zsh plugin automatic updating as we do it manually
 export UPDATE_ZSH_DAYS=9999
 
 # Enable OMZ
