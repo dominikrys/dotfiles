@@ -222,12 +222,15 @@ case `uname` in
       brew bundle dump -f --file=~/Brewfile
 
       echo "==> Creating a backup with mackup"
-      mackup backup -f
+      mackup backup --force
+
+      # Necessary as mackup is broken on Sonoma. More info: https://github.com/lra/mackup/issues/1924#issuecomment-2032982796
+      mackup uninstall --force
     }
     ;;
 esac
 
-alias gempty='git commit --allow-empty -m "Empty commit"'
+alias gce='git commit --allow-empty -m "Empty commit"'
 
 #####################################################################
 # Optional

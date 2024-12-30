@@ -75,7 +75,6 @@ Fix a git submodule in a `dirty` state
 
 ```bash
 git submodule foreach --recursive git checkout .
-git submodule foreach --recursive git checkout .
 ```
 
 Fix updating Oh My Zsh ([source](https://github.com/lra/mackup/issues/1384#issuecomment-512667195)): from the `~/.oh-my-zsh` directory, run:
