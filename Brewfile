@@ -25,17 +25,18 @@ brew "mas"
 brew "node"
 brew "openjdk"
 brew "python@3.9"
+brew "spek"
 brew "tldr"
 brew "tmux"
 brew "zsh"
 brew "arkweid/lefthook/lefthook"
-cask "aldente"
 cask "audacity"
 cask "balenaetcher"
 cask "betterzip"
 cask "calibre"
 cask "docker"
 cask "firefox"
+cask "ghostty"
 cask "google-chrome"
 cask "handbrake"
 cask "iina"
@@ -65,7 +66,6 @@ mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "Dark Reader for Safari", id: 1438243180
 mas "DaVinci Resolve", id: 571213070
-mas "Hidden Bar", id: 1452453066
 mas "Hover for Safari", id: 1540705431
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
