@@ -1,3 +1,6 @@
+adjust-cell-height = "5%"
+adjust-cell-width = "-5%"
+background = #181818
 confirm-close-surface = false
 font-family = "MesloLGS NF"
 font-size = 12
