@@ -26,7 +26,7 @@
     "editor.tabSize": 2
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnType": true
   },
   "[rust]": {

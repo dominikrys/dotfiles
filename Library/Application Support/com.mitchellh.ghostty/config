@@ -1,6 +1,10 @@
+adjust-cell-height = "5%"
+adjust-cell-width = "-5%"
+background = #181818
 confirm-close-surface = false
 font-family = "MesloLGS NF"
 font-size = 12
 keybind = super+f=write_screen_file:open
 macos-titlebar-style = tabs
 theme = Snazzy
+#theme = Dark Modern
