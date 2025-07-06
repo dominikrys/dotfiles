@@ -1,17 +1,11 @@
 tap "arkweid/lefthook"
-tap "homebrew/bundle"
-tap "homebrew/cask-drivers"
-tap "homebrew/cask-versions"
 tap "mhaeuser/mhaeuser"
-brew "xz"
 brew "git"
 brew "asdf"
 brew "bash"
 brew "bash-completion"
 brew "brew-cask-completion"
 brew "cmake"
-brew "openssl@3"
-brew "readline"
 brew "python@3.13"
 brew "cookiecutter"
 brew "direnv"
@@ -26,13 +20,13 @@ brew "mackup"
 brew "mas"
 brew "node"
 brew "openjdk"
-brew "pandoc"
-brew "python@3.12"
+brew "shellcheck"
 brew "spek"
 brew "tldr"
 brew "tmux"
 brew "uv"
 brew "zsh"
+brew "zsh-completions"
 brew "arkweid/lefthook/lefthook"
 cask "audacity"
 cask "balenaetcher"
@@ -40,40 +34,31 @@ cask "battery-toolkit"
 cask "calibre"
 cask "docker-desktop"
 cask "firefox"
-cask "ghostty"
 cask "google-chrome"
 cask "handbrake-app"
 cask "iina"
-cask "insomnia"
 cask "iterm2"
 cask "jordanbaird-ice"
 cask "kid3"
-cask "kindle-previewer"
-cask "logitech-unifying"
 cask "mediahuman-audio-converter"
 cask "monitorcontrol"
 cask "omnidisksweeper"
 cask "qbittorrent"
 cask "rectangle"
 cask "rekordbox"
-cask "steam"
+cask "spotify"
 cask "stretchly"
 cask "sublime-text"
+cask "syntax-highlight"
 cask "visual-studio-code"
+cask "youtube-to-mp3"
 cask "zoom"
-mas "Accelerate", id: 1459809092
-mas "AdGuard for Safari", id: 1440147259
-mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
-mas "Dark Reader for Safari", id: 1438243180
 mas "DaVinci Resolve", id: 571213070
-mas "Hover for Safari", id: 1540705431
 mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
 mas "Shazam", id: 897118787
 mas "Streaks", id: 963034692
 mas "The Unarchiver", id: 425424353
-mas "Tomato 2", id: 1494210770
 mas "WhatsApp", id: 310633997
 mas "Xcode", id: 497799835
 vscode "charliermarsh.ruff"
@@ -106,4 +91,3 @@ vscode "timonwong.shellcheck"
 vscode "ue.alphabetical-sorter"
 vscode "vadimcn.vscode-lldb"
 vscode "viablelab.capitalize"
-vscode "znck.grammarly"

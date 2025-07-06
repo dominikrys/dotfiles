@@ -23,12 +23,6 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # Compinstall config
 zstyle :compinstall filename "/Users/$USER/.zshrc"
-# autoload -Uz compinit 
-# if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
-# 	compinit;
-# else
-# 	compinit -C;
-# fi;
 
 # Suppress compilation warnings
 ZSH_DISABLE_COMPFIX=true
@@ -231,6 +225,9 @@ case `uname` in
 esac
 
 alias gce='git commit --allow-empty -m "Empty commit"'
+
+# Temporarily fix python
+export PATH="$(brew --prefix)/opt/python@3.12/libexec/bin:$PATH"
 
 #####################################################################
 # Optional
