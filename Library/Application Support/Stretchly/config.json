@@ -25,7 +25,7 @@
 	"transparentMode": false,
 	"blurredBackground": false,
 	"opacity": 0.9,
-	"audio": "crystal-glass",
+	"longBreakAudio": "crystal-glass",
 	"miniBreakAudio": "crystal-glass",
 	"volume": 1,
 	"fullscreen": false,
@@ -43,8 +43,8 @@
 	"useMonochromeInvertedTrayIcon": false,
 	"silentNotifications": true,
 	"monitorDnd": true,
-	"microbreakStartSoundPlaying": false,
-	"breakStartSoundPlaying": false,
+	"miniBreakStartSound": "silence",
+	"longBreakStartSound": "silence",
 	"themeSource": "system",
 	"endBreakShortcut": "CmdOrCtrl+X",
 	"breakWindowWidth": 0.85,
@@ -455,7 +455,7 @@
 	"pauseBreaksFor5HoursShortcut": "",
 	"pauseBreaksUntilMorningShortcut": "",
 	"screen": "primary",
-	"timeToBreakInTray": false,
+	"trayIconStyle": "default",
 	"currentTimeInBreaks": false,
 	"showTrayIcon": true,
 	"skipToNextScheduledBreakShortcut": "",
@@ -463,11 +463,19 @@
 	"skipToNextLongBreakShortcut": "",
 	"resetBreaksShortcut": "",
 	"showTrayMenuInStrictMode": false,
+	"customPreferencesMessage": "",
+	"disableAppUpdateFeatures": false,
+	"hidePreferencesFileLocation": false,
+	"hideStrictModePreferences": false,
+	"miniBreakManualFinish": false,
+	"longBreakManualFinish": false,
+	"openAtLogin": true,
+	"_migratedOpenAtLogin": true,
 	"pauseBreaksShortcut": "",
 	"resumeBreaksShortcut": "",
 	"__internal__": {
 		"migrations": {
-			"version": "1.17.2"
+			"version": "1.20.0"
 		}
 	}
 }

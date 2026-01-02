@@ -86,5 +86,7 @@
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
-  "application.shellEnvironmentResolutionTimeout": 15
+  "application.shellEnvironmentResolutionTimeout": 15,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "docker.extension.enableComposeLanguageServer": false
 }

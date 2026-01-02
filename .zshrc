@@ -94,6 +94,9 @@ if which go >/dev/null; then
   export PATH=$GOPATH/bin:$PATH
 fi
 
+# Configure pipx
+export PATH="$PATH:/Users/dominikrys/.local/bin"
+
 #####################################################################
 # Aliases
 #####################################################################
@@ -101,7 +104,6 @@ fi
 alias kctx='kubectx'
 alias lzd='lazydocker'
 alias cls='tput reset'                                          # Clear screen
-alias tpm-update='~/.tmux/plugins/tpm/bin/update_plugins all'   # Update TPM plugins
 alias git-refresh-gitignore='git rm -r --cached . && git add .' # Refresh .gitignore
 alias gstst='git stash --keep-index'                            # Stash unstaged changes
 
@@ -175,9 +177,6 @@ rebase-dependabot() {
 
 # Update tools
 update() {
-  echo "==> Updating TPM"
-  tpm-update 
-
   echo "==> Updating tldr"
   tldr --update
 
@@ -217,9 +216,6 @@ case `uname` in
 
       echo "==> Creating a backup with mackup"
       mackup backup --force
-
-      # Necessary as mackup is broken on Sonoma. More info: https://github.com/lra/mackup/issues/1924#issuecomment-2032982796
-      mackup uninstall --force
     }
     ;;
 esac

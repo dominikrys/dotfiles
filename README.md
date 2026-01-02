@@ -18,81 +18,85 @@ git submodule update --init --recursive
 
 ## Post-Cloning Steps
 
-Run Setup Script on macOS:
+1. Run the macOS setup script:
 
-```bash
-./macos-setup.sh
-```
+   ```bash
+   ./macos-setup.sh
+   ```
 
-Run mackup:
+1. Run mackup:
 
-```bash
-cp .mackup.cfg ~
-mackup restore
-```
+   ```bash
+   cp .mackup.cfg ~
+   mackup restore
+   ```
 
-Fix OMZ and Mackup:
+1. Clone ZSH plugins and themes:
 
-```sh
-git clone https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git $ZSH_CUSTOM/plugins/autoswitch_virtualenv
-git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins $ZSH_CUSTOM/plugins/autoupdate
-git clone https://github.com/Aloxaf/fzf-tab $ZSH_CUSTOM/plugins/fzf-tab
-git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-completions $ZSH_CUSTOM/plugins/zsh-completions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-git clone https://github.com/jocelynmallon/zshmarks $ZSH_CUSTOM/plugins/zshmarks
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-```
+   ```sh
+   git clone https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git $ZSH_CUSTOM/plugins/autoswitch_virtualenv
+   git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins $ZSH_CUSTOM/plugins/autoupdate
+   git clone https://github.com/Aloxaf/fzf-tab $ZSH_CUSTOM/plugins/fzf-tab
+   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+   git clone https://github.com/zsh-users/zsh-completions $ZSH_CUSTOM/plugins/zsh-completions
+   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+   git clone https://github.com/jocelynmallon/zshmarks $ZSH_CUSTOM/plugins/zshmarks
+   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+   ```
 
-Make manual changes
+1. Make manual changes:
 
-- [Install the font for P10k](https://github.com/romkatv/powerlevel10k#manual-font-installation).
+   - [Install the font for P10k](https://github.com/romkatv/powerlevel10k#manual-font-installation).
 
-- [Set up executing sudo without a password](https://askubuntu.com/a/147265).
+   - [Set up executing sudo without a password](https://askubuntu.com/a/147265).
 
-- Configure local-only changes in `~/.localrc.zsh`
+   - Configure changes you don't want to sync in `~/.localrc.zsh`
 
-- Install applications from the Brewfile.
+   - Install applications from the Brewfile.
 
-- Configure iTerm to use the settings under `~/dev/dotfiles/Library/Preferences/com.googlecode.iterm2.plist`
+   - Configure iTerm to use the settings under `~/dev/dotfiles/Library/Preferences/com.googlecode.iterm2.plist`
 
-- Blacklist some local-only changes in git:
+   - Blacklist some local-only changes in git:
 
-  ```sh
-  git update-index --assume-unchanged .tool-versions
-  ```
+     ```sh
+     git update-index --assume-unchanged .tool-versions
+     ```
 
-- Go through the `misc` and company-specific directories for anything that needs to be restored manually.
+   - Go through the `misc` and company-specific directories for anything that needs to be restored manually.
 
-- Configure system settings, Zoom settings, widgets sidebar, dock, menu bar, Finder sidebar, run all apps.
+   - Configure system settings, Zoom settings, widgets sidebar, dock, menu bar, Finder sidebar, run all apps.
 
-- Set up automation to run the Logseq backup script: [docs](https://stackoverflow.com/questions/36854193/scheduling-a-terminal-command-or-script-file-to-run-daily-at-a-specific-time-mac)
+   - Set up automation to run the Logseq backup script: [docs](https://stackoverflow.com/questions/36854193/scheduling-a-terminal-command-or-script-file-to-run-daily-at-a-specific-time-mac)
 
 ## Making backups & maintenance
 
-> To add more applications to be backed up, include them in `.mackup.cfg`.
+General tips:
 
-Backup application settings and make a list of Homebrew packages
+- To add more applications to be backed up, include them in `.mackup.cfg`.
+- Due to [an issue with macOS 14](https://github.com/lra/mackup#link-mode), preferences can't be symlinked. Instead, they are copied into the dotfiles folder. Given this, when modifying configurations, =do it on the original files and not the copies in the dotfiles directory.
+
+Backup application settings and make a list of Homebrew packages:
 
 ```bash
 backup
 ```
 
-Scan and add git submodules
+Scan and add git submodules:
 
 ```bash
 git-add-submodules
 ```
 
-Fix a git submodule in a `dirty` state
+Fix a git submodule in a `dirty` state:
 
 ```bash
 git submodule foreach --recursive git checkout .
 ```
 
-Fix updating Oh My Zsh ([source](https://github.com/lra/mackup/issues/1384#issuecomment-512667195)): from the `~/.oh-my-zsh` directory, run:
+Fix updating Oh My Zsh ([source](https://github.com/lra/mackup/issues/1384#issuecomment-512667195)):
 
 ```sh
+cd ~/.oh-my-zsh
 git checkout -b my-custom
 git add .
 git commit -m "fix mackup"
