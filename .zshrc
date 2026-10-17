@@ -201,7 +201,7 @@ case `uname` in
     functions[base_update]=$functions[update]
     update () {
       echo "==> Upgrading Homebrew packages"
-      brew upgrade
+      brew upgrade --yes
 
       echo "==> Cleaning unused Homebrew dependencies"
       brew autoremove
